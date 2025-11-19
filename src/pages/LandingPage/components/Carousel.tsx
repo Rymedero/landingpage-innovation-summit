@@ -14,14 +14,14 @@ export function Carousel() {
 
   const images = [imag3, imag2, imag1, imag4, imag5, imag6];
 
-   const scrollRef = useRef(null);
+   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const scrollLeft = () => {
-    scrollRef.current.scrollBy({ left: -400, behavior: "smooth" });
+    scrollRef.current?.scrollBy({ left: -400, behavior: "smooth" });
   };
 
   const scrollRight = () => {
-    scrollRef.current.scrollBy({ left: 400, behavior: "smooth" });
+    scrollRef.current?.scrollBy({ left: 400, behavior: "smooth" });
   };
 
   return (
