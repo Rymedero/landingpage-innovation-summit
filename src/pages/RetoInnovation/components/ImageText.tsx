@@ -8,7 +8,7 @@ return (
 
   <div className="">
           
-      <section className="pt-32 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-24">
+      <section className="pt-32 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-24">
 
 
         <motion.div
