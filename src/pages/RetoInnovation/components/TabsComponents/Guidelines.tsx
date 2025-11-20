@@ -1,0 +1,123 @@
+
+
+
+export function Guidelines() {
+
+    return (
+
+        <div className="max-w-6xl mx-auto px-4  ">
+
+        <div className="space-y-6">
+
+      {/* CATEGORÍA 1 */}
+      <div className=" p-2 rounded-2xl shadow-sm space-y-3">
+        <h2 className="font-semibold text-lg text-primary">
+          1.	Tiempo
+        </h2>
+
+        <ul className="space-y-2">
+          <li className="px-4 py-2 text-gray-400">
+            ●	Cada equipo dispondrá de 5 minutos cronometrados para presentar su pitch.
+          </li>
+          <li className="px-4 py-2 text-gray-400">
+            ●	Solo un integrante del equipo será el encargado de realizar el pitch. El resto del equipo debe estar atento y preparado para intervenir durante la ronda de preguntas del jurado.
+          </li>
+        </ul>
+      </div>
+
+      {/* CATEGORÍA 2 */}
+      <div className=" p-2 rounded-2xl shadow-sm space-y-3">
+        <h2 className="font-semibold text-lg text-primary">
+           2.	Apoyo Audiovisual
+        </h2>
+
+        <ul className="space-y-2">
+          <li className="px-4 py-2 text-gray-400">
+           ●	Se debe utilizar una presentación visual (PowerPoint, Canva, etc.) con un máximo de 10 láminas.
+          </li>
+          <li className="px-4 py-2 text-gray-400">
+           ●	Se recomienda incluir: logo, eslogan, imágenes del prototipo, gráficos, estadísticas, videos cortos.
+          </li>
+          <li className="px-4 py-2 text-gray-400">
+           ●	Evitar exceso de texto o elementos decorativos sin valor informativo.
+          </li>
+        </ul>
+      </div>
+
+      {/* CATEGORÍA 3 */}
+      <div className=" p-2 rounded-2xl shadow-sm space-y-3">
+        <h2 className="font-semibold text-lg text-primary">
+           3.	Contenido de la Presentación
+        </h2>
+
+        <ul className="space-y-2">
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+  {/* --- COLUMNA 1 --- */}
+  <li className="px-4 py-2 text-gray-400 leading-relaxed bg-gray-900/20 rounded-xl">
+    <span className="font-semibold">1. Identificación del Problema y Oportunidad</span>
+
+    <div className="ml-4 mt-1 text-gray-500">
+      • ¿Qué necesidad o dolor real están abordando?
+      <div>• ¿Qué impacto tendría resolver este problema?</div>
+    </div>
+  </li>
+
+  {/* --- COLUMNA 2 --- */}
+  <li className="px-4 py-2 text-gray-400 leading-relaxed bg-gray-900/20 rounded-xl">
+    <span className="font-semibold">2. Propuesta de Valor</span>
+
+    <div className="ml-4 mt-1 text-gray-500">
+      • ¿Qué solución proponen?
+      <div>• ¿Qué la hace única, creativa e innovadora?</div>
+    </div>
+  </li>
+
+  {/* --- COLUMNA 3 --- */}
+  <li className="px-4 py-2 text-gray-400 leading-relaxed bg-gray-900/20 rounded-xl">
+    <span className="font-semibold">3. Viabilidad y Ejecución</span>
+
+    <div className="ml-4 mt-1 text-gray-500">
+      • ¿Cómo planean implementar la solución?
+      <div>• ¿Qué recursos necesitan?</div>
+      <div>• ¿Cuáles son los próximos pasos?</div>
+    </div>
+  </li>
+</div>
+
+{/* ABAJO — 2 columnas */}
+<div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+  {/* --- COLUMNA 1 --- */}
+  <li className="px-4 py-2 text-gray-400 leading-relaxed bg-gray-900/20 rounded-xl">
+    <span className="font-semibold">4. Modelo</span>
+
+    <div className="ml-4 mt-1 text-gray-500">
+      • ¿Cómo funcionaría la empresa?
+      <div>• ¿Qué recursos necesitan?</div>
+      <div>• ¿Cuáles son los próximos pasos?</div>
+    </div>
+  </li>
+
+  {/* --- COLUMNA 2 --- */}
+  <li className="px-4 py-2 text-gray-400 leading-relaxed bg-gray-900/20 rounded-xl">
+    <span className="font-semibold">5. Modelo</span>
+
+    <div className="ml-4 mt-1 text-gray-500">
+      • ¿Cómo funcionaría la empresa?
+      <div>• ¿Qué recursos necesitan?</div>
+      <div>• ¿Cuáles son los próximos pasos?</div>
+    </div>
+  </li>
+</div>   
+
+    
+        </ul>
+      </div>
+
+    </div>
+    </div>
+
+
+    );
+
+}

@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-// Use the public/ folder as a static root with an absolute URL.
-// It's better to rename files to avoid spaces (see suggestions below).
-const video = "/Innovation Summit 2025.MP4";
+const video = "/Innovation Summit 2025.mp4";
 
 const headingText = "¿Tienes una idea que cambiará el juego? ¡Es hora de ejecutarla!";
 

@@ -37,10 +37,10 @@ export function Links() {
               href={item.href}
               className="flex items-start gap-4 group"
             >
-              {/* Icono */}
+  
               <div className="mt-1">{item.icon}</div>
 
-              {/* Texto */}
+
               <div className="flex-1">
                 <h3 className="font-semibold text-gray-800 group-hover:text-indigo-600 transition">
                   {item.title}
@@ -50,11 +50,11 @@ export function Links() {
                 </p>
               </div>
 
-              {/* Flecha */}
+
               <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-indigo-600 group-hover:translate-x-1 transition" />
             </a>
 
-            {/* Separador */}
+
             {i < links.length - 1 && (
               <div className="mt-4 border-b border-gray-200" />
             )}
