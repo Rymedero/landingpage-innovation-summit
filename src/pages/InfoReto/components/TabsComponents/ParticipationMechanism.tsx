@@ -13,7 +13,7 @@ export function ParticipationMechanism() {
                                     className="text-xl font-bold text-primary before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500 text-center">
                                     Público objetivo
                                 </h3>
-                                <h4 className="mt-2 text-base text-gray-400 text-center">Los colegios invitados son los encargados de seleccionar a los estudiantes que formarán parte del equipo que los va a representar en la competencia.</h4>
+                                <h4 className="mt-2 text-base text-gray-400 text-center">Estudiantes de educación media (4to y 5to año de bachillerato) de instituciones educativas de Venezuela.</h4>
                             </div>
                         </li>
                         <li className="flex-start group relative flex lg:flex-col">
@@ -22,7 +22,7 @@ export function ParticipationMechanism() {
                                     className="text-xl font-bold text-primary before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500 text-center">
                                     Cantidad de participantes
                                 </h3>
-                                <h4 className="mt-2 text-base text-gray-400 text-center">Cada institución educativa deberá conformar un equipo de 3 estudiantes. La composición del equipo es totalmente flexible y queda a criterio de la institución; los integrantes pueden ser de 4to año, de 5to año o una combinación de ambos.</h4>
+                                <h4 className="mt-2 text-base text-gray-400 text-center">Cada institución educativa debe conformar <span className=" font-bold text-white">un equipo de 3 estudiantes </span>. La composición del equipo es totalmente flexible y queda a criterio de la institución; los integrantes pueden ser de 4to año, de 5to año o una combinación de ambos.</h4>
                             </div>
                         </li>
                         <li className="flex-start group relative flex lg:flex-col">

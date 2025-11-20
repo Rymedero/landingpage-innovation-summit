@@ -1,6 +1,7 @@
+import { Footer } from "../../components/layouts/Footer";
 import { ImageTextSection } from "../RetoInnovation/components/ImageText";
 import { Carousel } from "./components/Carousel";
-import { InfoTabs } from "./components/InfoTabs";
+import { ImageTextInfo } from "./components/ImageTextInfo";
 
 
 
@@ -11,7 +12,8 @@ function RetoInnovation() {
 
     <ImageTextSection />
     <Carousel /> 
-    <InfoTabs />   
+    < ImageTextInfo />
+    <Footer />  
 
     </div>
 

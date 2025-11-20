@@ -1,29 +1,29 @@
-import { useEffect, useState } from "react"
-import innoImg from "../../assets/Captura de pantalla 2025-11-17 102226.png"
-
-
+import { useEffect, useState } from "react";
+import innoImg from "../../assets/Logos INSPIRA-02.png";
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [offset, setOffset] = useState(0)
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [offset, setOffset] = useState(0);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
-      const y = window.scrollY || 0
-      setScrolled(y > 20)
-      setOffset(Math.min(y / 4, 12)) // baja hasta 12px al scrollear
-    }
-    onScroll()
-    window.addEventListener("scroll", onScroll, { passive: true })
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
+      const y = window.scrollY || 0;
+      setScrolled(y > 20);
+      setOffset(Math.min(y / 4, 12));
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-          scrolled ? "bg-gray-900 bg-opacity-90 backdrop-blur-md shadow-md" : "bg-transparent"
+          scrolled
+            ? "bg-gray-900 bg-opacity-90 backdrop-blur-md shadow-md"
+            : "bg-transparent"
         }`}
         style={{ top: `-${offset}px`, transform: `translateY(${offset}px)` }}
       >
@@ -36,23 +36,32 @@ export function Navbar() {
             </div>
 
             <div className="hidden md:flex md:items-center md:justify-center md:space-x-10">
-              <a href="/" className="text-white hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center">
+              <a
+                href="/"
+                className="text-white hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center"
+              >
                 Inicio
               </a>
-              <a href="/reto-innovation" className="text-white hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center">
-                Reto intercolegial Inspira
+              <a
+                href="/reto-innovation"
+                className="text-white hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center"
+              >
+                Reto InspiraVe
               </a>
-              <a aria-disabled="true" className="text-white hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center opacity-35">
+              <a
+                aria-disabled="true"
+                className="text-white hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center opacity-35"
+              >
                 Focos
               </a>
-              <a aria-disabled="true" className="text-white disabled hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center opacity-35">
+              <a
+                aria-disabled="true"
+                className="text-white disabled hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center opacity-35"
+              >
                 Convocados
               </a>
             </div>
             <div className="flex items-center">
-
-              {/* <button className="btn btn-primary mt-4 px-4 py-2 w-36 md:w-auto text-center">Registrate</button> */}
-          
               <div className="flex items-center md:hidden">
                 <button
                   type="button"
@@ -62,12 +71,36 @@ export function Navbar() {
                 >
                   <span className="sr-only">Open main menu</span>
                   {!mobileOpen ? (
-                    <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    <svg
+                      className="block h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
                     </svg>
                   ) : (
-                    <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <svg
+                      className="block h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
                     </svg>
                   )}
                 </button>
@@ -76,32 +109,44 @@ export function Navbar() {
           </div>
         </div>
 
-
-        <div className={`${mobileOpen ? 'block' : 'hidden'} md:hidden`} id="mobile-menu">
+        <div
+          className={`${mobileOpen ? "block" : "hidden"} md:hidden`}
+          id="mobile-menu"
+        >
           <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-800 bg-opacity-90">
-            <a href="/" className="text-white block px-3 py-2 rounded-md text-base font-medium">
+            <a
+              href="/"
+              className="text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
               Inicio
             </a>
-            <a href="/reto-innovation" className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">
+            <a
+              href="/reto-innovation"
+              className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+            >
               Reto intercolegial Inspira
             </a>
-            <a href="#" className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">
+            <a
+              href="#"
+              className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+            >
               Salas
             </a>
-            <a href="#" className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">
+            <a
+              href="#"
+              className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+            >
               Focos
             </a>
-            <a href="#" className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">
+            <a
+              href="#"
+              className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+            >
               Convocados
             </a>
           </div>
         </div>
       </nav>
-
     </>
   );
 }
-
-
-
-     

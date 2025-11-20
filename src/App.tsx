@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage/LandingPage'
 import { Navbar } from './components/layouts/Navbar'
 import FirefliesBackground from './components/background/Fireflies'
 import RetoInnovation from './pages/RetoInnovation/RetoInnovation'
+import InfoReto from './pages/InfoReto/InfoReto'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/reto-innovation" element={<RetoInnovation />} />
+          <Route path="/info-reto" element={<InfoReto />} />
         </Routes>
       </Router>
     </div>

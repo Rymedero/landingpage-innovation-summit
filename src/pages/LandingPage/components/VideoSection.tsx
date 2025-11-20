@@ -65,7 +65,7 @@ export default function HeroSection() {
         viewport={{ once: true }}
         className="text-lg max-w-2xl text-white"
       >
-        El mejor evento de innovación y emprendimiento para estudiantes de educación media en Venezuela. Únete a nosotros para descubrir nuevas ideas, aprender de expertos y conectar con otros jóvenes emprendedores.
+        El mejor evento de innovación y emprendimiento para estudiantes de educación media en Venezuela. Únete a nosotros para descubrir nuevas ideas, aprender de expertos y conectar con el ecosistema emprendedor.
       </motion.p>
     </section>
   );

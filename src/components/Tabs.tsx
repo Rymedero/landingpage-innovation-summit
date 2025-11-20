@@ -19,7 +19,7 @@ export default function Tabs({ tabs }: TabsProps) {
     <div className="w-full flex flex-col items-center">
 
       <div className="relative w-full p-4 flex items-center justify-center max-w-6xl">
-        {/* TABS */}
+
         <div
           ref={scrollRef}
           className="flex gap-4 border-b overflow-x-auto scrollbar-hide w-full flex-nowrap px-2"
@@ -42,7 +42,6 @@ export default function Tabs({ tabs }: TabsProps) {
         </div>
       </div>
 
-      {/* CONTENIDO */}
       <div className="w-full max-w-7xl items-center justify-center">
         {tabs[active].content}
       </div>

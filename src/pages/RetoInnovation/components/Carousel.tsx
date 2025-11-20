@@ -10,11 +10,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Carousel() {
-
-
   const images = [imag3, imag2, imag1, imag4, imag5, imag6];
 
-   const scrollRef = useRef<HTMLDivElement | null>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const scrollLeft = () => {
     scrollRef.current?.scrollBy({ left: -400, behavior: "smooth" });
@@ -25,23 +23,23 @@ export function Carousel() {
   };
 
   return (
-    <motion.div 
-        initial={{ opacity: 0, x: -60 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        >
-    <div className="relative w-full  select-none mb-20">
+    <motion.div
+      initial={{ opacity: 0, x: -60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      <div className="relative w-full  select-none mb-20">
+        <h2 className="text-4xl font-bold hero-title px-20  mb-14 tracking-tight">
+          Reto InnovEYtion{" "}
+          <span className="text-white" style={{ WebkitTextFillColor: "white" }}>
+            2025
+          </span>
+        </h2>
 
-      {/* Título */}
-      <h2 className="text-4xl font-bold hero-title px-20  mb-14 tracking-tight">
-        Innovation Summit <span className="text-white">2025</span>
-      </h2>
-
-      {/* Flecha izquierda */}
-      <button
-        onClick={scrollLeft}
-        className="
+        <button
+          onClick={scrollLeft}
+          className="
           hidden md:flex
           absolute left-4 top-1/2 -translate-y-1/2 
           z-20 p-3 
@@ -50,22 +48,21 @@ export function Carousel() {
           transition 
           backdrop-blur-sm
         "
-      >
-        <ChevronLeft className="text-white" size={28} />
-      </button>
+        >
+          <ChevronLeft className="text-white" size={28} />
+        </button>
 
-      {/* Carrusel */}
-      <div
-        ref={scrollRef}
-        className="
+        <div
+          ref={scrollRef}
+          className="
           flex gap-8 px-6 overflow-x-auto scrollbar-none
           scroll-smooth
         "
-      >
-        {images.map((src, i) => (
-          <div
-            key={i}
-            className="
+        >
+          {images.map((src, i) => (
+            <div
+              key={i}
+              className="
               w-[270px] md:w-[270px] lg:w-[270px]
               aspect-[4/5]
               overflow-hidden 
@@ -73,10 +70,10 @@ export function Carousel() {
               group 
               flex-shrink-0
             "
-          >
-            <img
-              src={src}
-              className="
+            >
+              <img
+                src={src}
+                className="
                 w-full h-full 
                 object-cover 
                 rounded-2xl
@@ -85,15 +82,14 @@ export function Carousel() {
                 ease-out
                 group-hover:scale-110
               "
-            />
-          </div>
-        ))}
-      </div>
+              />
+            </div>
+          ))}
+        </div>
 
-      {/* Flecha derecha */}
-      <button
-        onClick={scrollRight}
-        className="
+        <button
+          onClick={scrollRight}
+          className="
           hidden md:flex
           absolute right-4 top-1/2 -translate-y-1/2 
           z-20 p-3 
@@ -102,11 +98,10 @@ export function Carousel() {
           transition 
           backdrop-blur-sm
         "
-      >
-        <ChevronRight className="text-white" size={28} />
-      </button>
-
-    </div>
+        >
+          <ChevronRight className="text-white" size={28} />
+        </button>
+      </div>
     </motion.div>
   );
 }

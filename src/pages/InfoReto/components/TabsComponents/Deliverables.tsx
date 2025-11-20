@@ -1,8 +1,11 @@
+
+
+
 export function Deliverables() {
   return (
-    <div className="max-w-6xl mx-auto px-4  ">
+    <div className="max-w-6xl mx-auto px-4 py-12 flex items-center justify-center ">
       <div className="space-y-6">
-        {/* CATEGORÍA 1 */}
+
         <div className=" p-2 rounded-2xl shadow-sm space-y-3">
           <h2 className="font-semibold text-lg text-primary">
             Cada equipo deberá entregar:
@@ -14,7 +17,7 @@ export function Deliverables() {
               link:
               <div className="mt-1 ml-4">
                 <a
-                  href="#"
+                  href="https://www.canva.com/design/DAG4m7jmK0k/ZMoU2Z8EIkN5jpuP7S1EwA/edit"
                   className="text-white underline hover:text-gray-200"
                 >
                   Abrir plantilla
@@ -33,7 +36,7 @@ export function Deliverables() {
           </ul>
         </div>
 
-        {/* CATEGORÍA 2 */}
+     
         <div className=" p-2 rounded-2xl shadow-sm space-y-3">
           <h2 className="font-semibold text-lg text-primary">
             ¿Cómo usar la plantilla?
@@ -44,7 +47,7 @@ export function Deliverables() {
               <span className="font-semibold">1. Accede a la plantilla</span>
 
               <div className="ml-4 mt-1">
-                <a href="#" className="text-white underline">
+                <a href="https://www.canva.com/design/DAG4m7jmK0k/ZMoU2Z8EIkN5jpuP7S1EwA/edit" className="text-white underline">
                   Haz clic aquí
                 </a>
                 <span className="ml-1">para abrir la plantilla</span>
