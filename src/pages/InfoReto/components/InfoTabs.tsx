@@ -11,7 +11,7 @@ import { TrainingSchedule } from "./TabsComponents/TrainingSchedule";
 
 export function InfoTabs() {
   return (
-    <div className="mb-20">
+    <div className="">
         <h2 className="hero-title text-3xl font-bold text-center pt-40 mb-8">¡Todo lo que debes saber acerca de la competencia!</h2>
       <Tabs
         tabs={[

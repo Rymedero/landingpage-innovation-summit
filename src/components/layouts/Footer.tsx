@@ -20,7 +20,7 @@ export function Footer() {
           <motion.img
             src={logo1}
             alt="Logo 1"
-            className="w-48 h-48 object-contain"
+            className="w-48 h-48 object-contain mb-9 px-2"
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 200 }}
           />
@@ -30,7 +30,7 @@ export function Footer() {
           <motion.img
             src={logo4}
             alt="Logo 2"
-            className="w-48 h-48 object-contain"
+            className="w-48 h-48 object-contain px-2"
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 200 }}
           />
@@ -40,7 +40,7 @@ export function Footer() {
           <motion.img
             src={logo3}
             alt="Logo 3"
-            className="w-56 h-56 object-contain"
+            className="w-56 h-56 object-contain px-3"
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 200 }}
           />
@@ -49,7 +49,7 @@ export function Footer() {
           <motion.img
             src={logo2}
             alt="Logo 4"
-            className="w-56 h-56 object-contain"
+            className="w-56 h-56 object-contain px-4"
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 200 }}
           />
