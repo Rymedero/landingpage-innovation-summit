@@ -4,15 +4,12 @@ import imag3 from "../../../assets/AA.jpg";
 import imag4 from "../../../assets/EY Evento-100.jpg";
 import imag5 from "../../../assets/EY Evento-500.jpg";
 import imag6 from "../../../assets/EY Evento-513.jpg";
-import imag7 from "../../../assets/Copia de 9C5A4767.jpg";
-import imag8 from "../../../assets/Copia de 9C5A4632.jpg";
-
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Carousel() {
-  const images = [imag3, imag2, imag1, imag4, imag5, imag6, imag7, imag8];
+  const images = [imag3, imag2, imag1, imag4, imag5, imag6];
 
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
