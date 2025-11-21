@@ -35,7 +35,7 @@ export function ImageTextInfo() {
                 href="https://forms.gle/KgettCAz8rBSC7LM6"
                 className="inline-block px-8 py-3 text-lg font-semibold text-white bg-indigo-600 rounded-full hover:bg-indigo-700 transition shadow-lg"
               >
-                ¡Regístrate Ya!
+                ¡Regístrate ya!
               </a>
             </div>
           </div>

@@ -32,13 +32,13 @@ export function PitchInnovation() {
 
       <div className=" p-2 rounded-2xl shadow-sm space-y-3">
         <h2 className="font-semibold text-lg text-primary">
-          Estructura Sugerida del Pitch
+          Estructura sugerida del pitch
         </h2>
 
         <ul className="space-y-2">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <li className="px-4 py-2 text-gray-400 leading-relaxed bg-indigo-800/10 rounded-xl">
-              <span className="font-semibold">1. Apertura Impactante</span>
+              <span className="font-semibold">1. Apertura impactante</span>
 
               <div className="ml-4 mt-1 text-gray-500">
                 • Usa una frase provocadora o dato relevante.
@@ -47,7 +47,7 @@ export function PitchInnovation() {
             </li>
 
             <li className="px-4 py-2 text-gray-400 leading-relaxed bg-indigo-800/10 rounded-xl">
-              <span className="font-semibold">2. Presentación del Equipo</span>
+              <span className="font-semibold">2. Presentación del equipo</span>
 
               <div className="ml-4 mt-1 text-gray-500">
                 • Nombres, roles y propósito del equipo.
@@ -55,7 +55,7 @@ export function PitchInnovation() {
             </li>
 
             <li className="px-4 py-2 text-gray-400 leading-relaxed  bg-indigo-800/10 rounded-xl">
-              <span className="font-semibold">3. Descripción del Problema</span>
+              <span className="font-semibold">3. Descripción del problema</span>
 
               <div className="ml-4 mt-1 text-gray-500">
                 • ¿Qué necesidad existe en el mercado o comunidad? Enfócate en
@@ -66,7 +66,7 @@ export function PitchInnovation() {
 
           <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
             <li className="px-4 py-2 text-gray-400 leading-relaxed  bg-indigo-800/10 rounded-xl">
-              <span className="font-semibold">4. Solución Propuesta</span>
+              <span className="font-semibold">4. Solución propuesta</span>
 
               <div className="ml-4 mt-1 text-gray-500">
                 • ¿Qué producto o servicio ofrecen?
@@ -95,7 +95,7 @@ export function PitchInnovation() {
           <div className="mt-6 grid grid-cols-1 md:grid-cols-1 gap-6">
             <li className="px-4 py-2 text-gray-400 leading-relaxed  bg-indigo-800/10 rounded-xl">
               <span className="font-semibold">
-                7. Cierre con Llamado a la Acción
+                7. Cierre con llamado a la acción
               </span>
 
               <div className="ml-4 mt-1 text-gray-500">
@@ -107,7 +107,7 @@ export function PitchInnovation() {
 
           <div className="mt-8 border-t border-gray-700 mb-16">
             <h2 className="font-semibold text-lg text-primary mt-8 mb-4">
-              Tips a considerar para el Pitch
+              Tips a considerar para el pitch
             </h2>
           </div>
           <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8 mt-8 mb-16">

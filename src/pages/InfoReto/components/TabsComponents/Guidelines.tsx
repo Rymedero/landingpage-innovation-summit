@@ -25,7 +25,7 @@ export function Guidelines() {
      
         <div className=" p-2 rounded-2xl shadow-sm space-y-3">
           <h2 className="font-semibold text-lg text-primary">
-            2. Apoyo Audiovisual
+            2. Apoyo audiovisual
           </h2>
 
           <ul className="space-y-2">
@@ -47,7 +47,7 @@ export function Guidelines() {
   
         <div className=" p-2 rounded-2xl shadow-sm space-y-3">
           <h2 className="font-semibold text-lg text-primary">
-            3. Contenido de la Presentación
+            3. Contenido de la presentación
           </h2>
 
           <ul className="space-y-2">
@@ -55,7 +55,7 @@ export function Guidelines() {
   
               <li className="px-4 py-2 text-gray-400 leading-relaxed bg-indigo-800/10 rounded-xl">
                 <span className="font-semibold">
-                  1. Identificación del Problema y Oportunidad
+                  1. Identificación del problema y oportunidad
                 </span>
 
                 <div className="ml-4 mt-1 text-gray-500">
@@ -66,7 +66,7 @@ export function Guidelines() {
 
 
               <li className="px-4 py-2 text-gray-400 leading-relaxed bg-indigo-800/10 rounded-xl">
-                <span className="font-semibold">2. Propuesta de Valor</span>
+                <span className="font-semibold">2. Propuesta de valor</span>
 
                 <div className="ml-4 mt-1 text-gray-500">
                   • ¿Qué solución proponen?
@@ -76,7 +76,7 @@ export function Guidelines() {
 
 
               <li className="px-4 py-2 text-gray-400 leading-relaxed bg-indigo-800/10 rounded-xl">
-                <span className="font-semibold">3. Viabilidad y Ejecución</span>
+                <span className="font-semibold">3. Viabilidad y ejecución</span>
 
                 <div className="ml-4 mt-1 text-gray-500">
                   • ¿Cómo planean implementar la solución?
@@ -101,12 +101,10 @@ export function Guidelines() {
 
     
               <li className="px-4 py-2 text-gray-400 leading-relaxed bg-indigo-800/10 rounded-xl">
-                <span className="font-semibold">5. Modelo</span>
-
+                <span className="font-semibold">5. Impacto y sostenibilidad</span>
                 <div className="ml-4 mt-1 text-gray-500">
-                  • ¿Cómo funcionaría la empresa?
-                  <div>• ¿Qué recursos necesitan?</div>
-                  <div>• ¿Cuáles son los próximos pasos?</div>
+                  • ¿Qué efecto positivo tendría en la comunidad o el entorno?
+                  <div>• ¿Puede escalar más allá del colegio?</div>
                 </div>
               </li>
             </div>

@@ -16,10 +16,10 @@ export function InfoTabs() {
       <Tabs
         tabs={[
           { label: "Mecanismo de participación", content: <ParticipationMechanism />},
-          { label: "Cronograma Formativo", content: <TrainingSchedule />},
-          { label: "Categorías de Proyecto", content: <Challenge />},
-          { label: "Pitch de Innovación", content: < PitchInnovation />},
-          { label: "Pautas a Considerar", content: <Guidelines />},
+          { label: "Cronograma formativo", content: <TrainingSchedule />},
+          { label: "Categorías de proyecto", content: <Challenge />},
+          { label: "Pitch de innovación", content: < PitchInnovation />},
+          { label: "Pautas a considerar", content: <Guidelines />},
           { label: "Entregables", content: < Deliverables />},
           { label: "Evaluación", content: < Evaluation />},
           
