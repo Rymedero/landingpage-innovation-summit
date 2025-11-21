@@ -44,7 +44,7 @@ export default function HeroSection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="hero-title text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-2xl text-white [text-shadow:_0_4px_12px_rgb(0_0_0_/_90%)]"
+        className="hero-title text-2xl sm:text-3xl md:text-5xl font-extrabold mb-4 drop-shadow-2xl text-white [text-shadow:_0_4px_12px_rgb(0_0_0_/_90%)]"
         aria-label={headingText}
       >
         {headingText.split("").map((char, i) => (

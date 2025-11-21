@@ -11,7 +11,7 @@ export function Register() {
         rel="noopener noreferrer"
         className="text-2xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary  transition-all duration-300 hover:scale-105  hover:decoration-indigo-400 decoration-4 underline-offset-8"
       >
-        Haz click <span className="text-white">Aquí</span> y Regístrate 
+        Haz click <span className="text-white">aquí</span> y regístrate 
       </a>
     </div>
   );
