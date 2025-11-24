@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import innoImg from "../../assets/Logos INSPIRA-02.png";
+import innoImg from "../../assets/LogoInnovation.png";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
