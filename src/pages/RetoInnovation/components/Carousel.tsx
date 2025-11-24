@@ -1,4 +1,4 @@
-import imag1 from "../../../assets/2.jpg";
+import imag1 from "../../../assets/10.jpg";
 import imag2 from "../../../assets/9.jpg";
 import imag3 from "../../../assets/AA.jpg";
 import imag4 from "../../../assets/EY Evento-100.jpg";
