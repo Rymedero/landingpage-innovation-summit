@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import innoImg from "../../assets/LogoInnovation.png";
+import inspiraImg from "../../assets/Logos INSPIRA-02.png";
 
 export function Navbar() {
+  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [offset, setOffset] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
+
 
   useEffect(() => {
     const onScroll = () => {
@@ -31,7 +35,13 @@ export function Navbar() {
           <div className="flex justify-between h-20">
             <div className="flex items-center">
               <a href="#" className="flex-shrink-0 flex items-center">
-                <img className="h-20 w-auto" src={innoImg} alt="Logo" />
+                <img
+                  className="h-20 w-auto"
+                  src={
+                    location.pathname === "/info-reto" ? inspiraImg : innoImg
+                  }
+                  alt="Logo"
+                />
               </a>
             </div>
 
