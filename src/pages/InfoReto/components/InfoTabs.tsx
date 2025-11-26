@@ -17,7 +17,7 @@ export function InfoTabs() {
         tabs={[
           { label: "Mecanismo de participación", content: <ParticipationMechanism />},
           { label: "Cronograma formativo", content: <TrainingSchedule />},
-          { label: "Categorías de proyecto", content: <Challenge />},
+          { label: "Sectores productivos", content: <Challenge />},
           { label: "Pitch de innovación", content: < PitchInnovation />},
           { label: "Pautas a considerar", content: <Guidelines />},
           { label: "Entregables", content: < Deliverables />},
