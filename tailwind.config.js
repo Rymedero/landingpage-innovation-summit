@@ -29,7 +29,7 @@ export default {
     themes: [
       {
         mytheme: {
-          primary: "#f9e600",
+          primary: "#FFE600",
           secondary: "#2E2E38",
           colorA: "#00276c",
           "1c1d1e": "#1c1d1e",

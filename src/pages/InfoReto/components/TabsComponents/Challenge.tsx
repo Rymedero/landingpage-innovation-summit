@@ -23,6 +23,15 @@ export function Challenge() {
           <li className="px-4 py-2 text-gray-400 leading-relaxed bg-indigo-800/10 rounded-xl">
             <span className="font-semibold">6. Oil & Gas</span>
           </li>
+          <li className="px-4 py-2 text-gray-400 leading-relaxed bg-indigo-800/10 rounded-xl">
+            <span className="font-semibold">7. Tecnología e Innovación</span>
+          </li>
+          <li className="px-4 py-2 text-gray-400 leading-relaxed bg-indigo-800/10 rounded-xl">
+            <span className="font-semibold">8. Salud</span>
+          </li>
+          <li className="px-4 py-2 text-gray-400 leading-relaxed bg-indigo-800/10 rounded-xl">
+            <span className="font-semibold">9. Manufactura</span>
+          </li>
         </ul>
       </div>
     </div>
