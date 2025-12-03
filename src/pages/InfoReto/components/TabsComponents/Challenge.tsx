@@ -111,6 +111,19 @@ g.	Eficiencia Energética en Plantas Industriales: Reducción de consumo y emisi
 h.	Cadenas de Suministro Resilientes: Logística optimizada y trazabilidad.
 `,
   },
+
+  {
+    title: "10. Infraestructura",
+    description:
+       `a.	Ciudades Inteligentes: Gestión urbana con sensores y datos.
+b.	Movilidad Eléctrica y Transporte Sostenible: Vehículos eléctricos y redes de carga.
+c.	Energías Renovables: Solar, eólica y biomasa.
+d.	Redes Eléctricas Inteligentes (Smart Grids): Distribución eficiente de energía.
+e.	Construcción Modular y Prefabricada: Reducción de costos y tiempos.
+f.	Gestión de Agua y Saneamiento Avanzado: Tecnologías para optimizar recursos hídricos.
+g.	Infraestructura Digital (Fibra Óptica, 5G): Conectividad para desarrollo económico.
+h.	Resiliencia ante Desastres Naturales: Diseño y materiales para mitigación de riesgos.`,
+  },
 ];
 
 export function Challenge() {
