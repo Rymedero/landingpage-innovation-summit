@@ -124,7 +124,7 @@ export function Challenge() {
                 id={`challenge-modal-${index}`}
                 title={challenge.title}
                 trigger={
-                  <div className="px-4 py-2 text-gray-400 leading-relaxed bg-indigo-800/10 rounded-xl hover:bg-gray-500/20 transition-colors cursor-pointer border border-white">
+                  <div className="px-4 py-2 text-gray-400 leading-relaxed bg-indigo-800/10 rounded-xl hover:bg-gray-500/20 hover:text-primary transition-colors cursor-pointer border border-white">
                     <span className="font-semibold">{challenge.title}</span>
                   </div>
                 }
