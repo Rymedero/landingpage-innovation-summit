@@ -21,11 +21,7 @@ export function ParticipationMechanismUni() {
                 Cantidad de participantes
               </h3>
               <h4 className="mt-2 text-base text-gray-400 text-center">
-                 Los estudiantes pueden postularse de forma individual o en equipo máximo de
-                <span className=" font-bold text-white">
-                  tres 
-                </span>
-                . personas.
+                 Los estudiantes pueden postularse de forma individual <br /> o en equipo máximo de <span className=" font-bold text-white">tres</span> personas.
               </h4>
             </div>
           </li>
