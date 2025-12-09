@@ -1,6 +1,6 @@
-import imag1 from "../../../assets/10.jpg";
-import imag2 from "../../../assets/9.jpg";
-import imag3 from "../../../assets/AA.jpg";
+import imag1 from "../../../assets/University/EY Evento-336.jpg";
+import imag2 from "../../../assets/University/EY Evento-152.jpg";
+import imag3 from "../../../assets/University/EY Evento-64.jpg";
 import imag4 from "../../../assets/EY Evento-100.jpg";
 import imag5 from "../../../assets/EY Evento-500.jpg";
 import imag6 from "../../../assets/EY Evento-513.jpg";
@@ -9,7 +9,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function CarouselUni() {
-  const images = [imag3, imag2, imag1, imag4, imag5, imag6];
+  const images = [imag3, imag1, imag2, imag4, imag5, imag6];
 
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
