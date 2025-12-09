@@ -1,7 +1,6 @@
 
 
-
-export function ParticipationMechanism() {
+export function ParticipationMechanismUni() {
   return (
     <section className=" py-6 sm:py-16 lg:py-10 xl:py-12 items-center justify-center">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-4 items-center justify-center">
@@ -12,8 +11,7 @@ export function ParticipationMechanism() {
                 Público objetivo
               </h3>
               <h4 className="mt-2 text-base text-gray-400 text-center">
-                Estudiantes de educación media (4to y 5to año de bachillerato)
-                de instituciones educativas de Venezuela.
+                Estudiantes de las universidades de Venezuela.
               </h4>
             </div>
           </li>
@@ -23,13 +21,11 @@ export function ParticipationMechanism() {
                 Cantidad de participantes
               </h3>
               <h4 className="mt-2 text-base text-gray-400 text-center">
-                Cada institución educativa debe conformar{" "}
+                 Los estudiantes pueden postularse de forma individual o en equipo máximo de
                 <span className=" font-bold text-white">
-                  un equipo de 3 estudiantes{" "}
+                  tres 
                 </span>
-                . La composición del equipo es totalmente flexible y queda a
-                criterio de la institución; los integrantes pueden ser de 4to
-                año, de 5to año o una combinación de ambos.
+                . personas.
               </h4>
             </div>
           </li>
@@ -39,9 +35,7 @@ export function ParticipationMechanism() {
                 Método de inscripción
               </h3>
               <h4 className="mt-2 text-base text-gray-400 text-center">
-                La directiva de cada institución recibirá un enlace de registro
-                a través del cual podrán inscribir a los estudiantes
-                seleccionados para conformar el equipo.
+                Formulario de inscripción mediante el cual los estudiantes podrán postular su proyecto.
               </h4>
             </div>
           </li>
@@ -51,10 +45,7 @@ export function ParticipationMechanism() {
                 Acompañamiento docente
               </h3>
               <h4 className="mt-2 text-base text-gray-400 text-center">
-                Cada institución educativa puede optar por enviar un docente
-                acompañante, aunque no es obligatorio. La logística del evento
-                se hará cargo de la atención y el acompañamiento de los
-                estudiantes durante toda la actividad.
+               Dos sesiones de mentorías con especialistas que te ayudarán a: Validar tu idea, diseñar tu modelo de negocio y preparar tu Pitch.
               </h4>
             </div>
           </li>

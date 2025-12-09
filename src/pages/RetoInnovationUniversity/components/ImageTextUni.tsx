@@ -3,30 +3,30 @@ import { Link } from "react-router-dom";
 import heroImg from "../../../assets/Captura de pantalla 2025-11-17 102442.png";
 import inspiraLogo from "../../../assets/Logos INSPIRA-02.png";
 
-export function ImageTextSection() {
+export function ImageTextUni() {
 return (
 
-  <div className="relative">
-
+  <div>
           
       <section className="pt-32 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-24">
 
-        <motion.div
+
+       <motion.div
         initial={{ opacity: 0, x: -60 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
         >
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 mb-4">
           <h2 className="hero-title text-5xl">Reto </h2>
           <img src={inspiraLogo} alt="Inspira Logo" className="h-24 object-contain" />
         </div>
-        <h2 className="text-xl mb-4 text-white">Intercolegial</h2>
+        <h2 className="text-xl mb-4 text-white">Interuniversitario</h2>
         <h2 className="text-4xl mb-4 text-white font-bold">2026</h2>
         <p className="text-gray-400 mb-4 text-justify">
-        El Reto InspiraVe, es una competencia intercolegial de emprendimiento que busca impulsar y fomentar el espíritu emprendedor en estudiantes de educación media (4to y 5to año), conectándolos con el ecosistema empresarial e innovador, a través de una competencia intercolegial que los desafía a crear ideas de negocio capaces de transformar realidades y resolver necesidades clave de los sectores productivos de Venezuela.
+        El Reto InspiraVe, es una competencia intercolegial de emprendimiento que busca impulsar y fomentar el espíritu emprendedor en estudiantes universitarios, conectándolos con el ecosistema empresarial e innovador, a través de una competencia intercolegial que los desafía a crear ideas de negocio capaces de transformar realidades y resolver necesidades clave de los sectores productivos de Venezuela.
         </p>
-        <Link to="/info-reto">
+        <Link to="/info-reto-university">
           <button className="btn btn-primary mt-4 border-white border-2">Saber más</button>
         </Link>
         </motion.div>
@@ -40,6 +40,8 @@ return (
         viewport={{ once: true }}
         className="rounded-2xl shadow-lg w-full"
         />
+
+       
       </section>
   </div>
 );

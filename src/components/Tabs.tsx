@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 
 interface TabItem {
@@ -13,6 +14,8 @@ interface TabsProps {
 export default function Tabs({ tabs }: TabsProps) {
   const [active, setActive] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+  const isUniversity = location.pathname.toLowerCase().includes("university");
 
 
   return (
@@ -31,7 +34,7 @@ export default function Tabs({ tabs }: TabsProps) {
                 min-w-[120px] sm:min-w-[140px] 
                 max-w-[200px] md:max-w-[280px] 
                 break-words font-medium transition ${active === index
-                  ? "border-b-2 border-indigo-500 text-primary"
+                  ? `border-b-2 ${isUniversity ? "border-primary" : "border-indigo-500"} text-primary`
                   : "text-gray-500 hover:text-primary"
                 }`}
               onClick={() => setActive(index)}

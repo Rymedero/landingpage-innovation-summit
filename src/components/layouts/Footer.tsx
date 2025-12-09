@@ -3,10 +3,13 @@ import logo1 from "../../assets/EY_Logo_Beam_STFWC_Horizontal_Small_RGB_White_Ye
 import logo2 from "../../assets/Logos INSPIRA-02.png";
 import logo3 from "../../assets/Kuriosb-removebg-preview.png";
 import logo4 from "../../assets/LogoInnovation.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 
 export function Footer() {
+  const location = useLocation();
+  const isUniversity = location.pathname.toLowerCase().includes('university');
+
   return (
     <footer className="footer footer-horizontal footer-center bg-transparent text-primary-content  border-t border-white border-12">
       <aside className="flex flex-col items-center gap-0">
@@ -36,15 +39,17 @@ export function Footer() {
           />
          
 
-         <Link to="https://www.kuriosedu.com/">
-          <motion.img
-            src={logo3}
-            alt="Logo 3"
-            className="w-56 h-56 object-contain px-3"
-            whileHover={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 200 }}
-          />
-          </Link>
+         {!isUniversity && (
+           <Link to="https://www.kuriosedu.com/">
+            <motion.img
+              src={logo3}
+              alt="Logo 3"
+              className="w-56 h-56 object-contain px-3"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 200 }}
+            />
+           </Link>
+         )}
 
           <motion.img
             src={logo2}

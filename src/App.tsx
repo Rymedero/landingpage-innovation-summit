@@ -5,6 +5,8 @@ import { Navbar } from './components/layouts/Navbar'
 import FirefliesBackground from './components/background/Fireflies'
 import RetoInnovation from './pages/RetoInnovation/RetoInnovation'
 import InfoReto from './pages/InfoReto/InfoReto'
+import RetoInnovationUniversity from './pages/RetoInnovationUniversity/RetoInnovationUniversity'
+import InfoRetoUniversity from './pages/RetoInnovationUniversity/pages/InfoRetoUniversity/InfoRetoUniversity'
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/reto-innovation" element={<RetoInnovation />} />
           <Route path="/info-reto" element={<InfoReto />} />
+          <Route path="/reto-innovation-university" element={<RetoInnovationUniversity />} />
+          <Route path="/info-reto-university" element={<InfoRetoUniversity />} />
         </Routes>
       </Router>
     </div>

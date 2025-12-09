@@ -5,6 +5,7 @@ import { ImageTextInfo } from "./components/ImageTextInfo";
 
 
 
+
 function RetoInnovation() {
   return (
 

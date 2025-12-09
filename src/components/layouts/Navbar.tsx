@@ -48,15 +48,33 @@ export function Navbar() {
             <div className="hidden md:flex md:items-center md:justify-center md:space-x-10">
               <a
                 href="/"
-                className="text-white hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center"
+                className={`${
+                  location.pathname === "/" ? "text-yellow-400" : "text-white"
+                } hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center`}
               >
                 Inicio
               </a>
               <a
                 href="/reto-innovation"
-                className="text-white hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center"
+                className={`${
+                  location.pathname === "/reto-innovation"
+                    ? "text-yellow-400"
+                    : "text-white"
+                } hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center text-center`}
               >
-                Reto InspiraVe
+                Reto InspiraVe <br></br>
+                <h1 className="items-center text-center">Intercolegial</h1>
+              </a>
+              <a
+                href="/reto-innovation-university"
+                className={`${
+                  location.pathname === "/reto-innovation-university"
+                    ? "text-yellow-400"
+                    : "text-white"
+                } hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center text-center`}
+              >
+                Reto InspiraVe <br></br>
+                <h1 className="text-center">Interuniversitario</h1>
               </a>
               <a
                 aria-disabled="true"
@@ -140,7 +158,13 @@ export function Navbar() {
               href="/reto-innovation"
               className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
             >
-              Reto InspiraVe
+              Reto InspiraVe intercolegial
+            </a>
+             <a
+              href="/reto-innovation-university"
+              className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
+            >
+              Reto InspiraVe interuniversitario
             </a>
             <a
               aria-disabled="true"
