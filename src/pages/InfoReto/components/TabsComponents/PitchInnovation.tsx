@@ -9,11 +9,9 @@ export function PitchInnovation() {
         <div className="justify">
           <p className="text-gray-600 dark:text-gray-400 justify">
             <span className="text-primary text-xl">
-              Es una narrativa persuasiva y breve,
+              Se trata de una narrativa breve y persuasiva 
             </span>{" "}
-            donde se exponen los beneficios y el valor de tu idea de negocio que
-            se está ofreciendo en minutos. Son esenciales a la hora de dar una
-            presentación a un posible inversor o cliente potencial.
+            que destaca los beneficios y el valor de tu idea de negocio en cuestión de minutos. Este recurso es fundamental para captar la atención durante una presentación ante posibles inversores o clientes potenciales.
           </p>
         </div>
       </div>

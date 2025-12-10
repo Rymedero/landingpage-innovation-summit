@@ -24,8 +24,15 @@ return (
         <h2 className="text-xl mb-4 text-white">Interuniversitario</h2>
         <h2 className="text-4xl mb-4 text-white font-bold">2026</h2>
         <p className="text-gray-400 mb-4 text-justify">
-        El Reto InspiraVe, es una competencia intercolegial de emprendimiento que busca impulsar y fomentar el espíritu emprendedor en estudiantes universitarios, conectándolos con el ecosistema empresarial e innovador, a través de una competencia intercolegial que los desafía a crear ideas de negocio capaces de transformar realidades y resolver necesidades clave de los sectores productivos de Venezuela.
+        El <span className="text-white font-normal">Reto InspiraVe</span> es mucho más que una competencia: es una oportunidad para que los jóvenes universitarios den vida a sus ideas y se conecten con el ecosistema empresarial e innovador del país.
+A través de este desafío, los participantes desarrollarán proyectos capaces de <span className="text-white font-normal">resolver necesidades reales</span> y <span className="text-white font-normal">transformar sectores productivos clave</span>. Queremos impulsar tu creatividad, tu capacidad de innovación y tu talento para trabajar en equipo, porque sabemos que las soluciones con impacto nacen de mentes inspiradas.
         </p>
+        <p className="text-gray-400 mb-4 text-justify">¿Estás listo para convertir tu idea en una realidad que marque la diferencia?
+¡Únete al Reto InspiraVe y sé parte del cambio!</p>
+
+         <p className="text-white mb-4 text-justify font-bold ">¡Únete al Reto InspiraVe y sé parte del cambio!</p>
+
+    
         <Link to="/info-reto-university">
           <button className="btn btn-primary mt-4 border-white border-2">Saber más</button>
         </Link>
