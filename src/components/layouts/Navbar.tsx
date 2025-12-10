@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import innoImg from "../../assets/LogoInnovation.png";
 import inspiraImg from "../../assets/Logos INSPIRA-02.png";
+import innoImgUni from "../../assets/University/logo.png";
 
 export function Navbar() {
   const location = useLocation();
@@ -38,7 +39,11 @@ export function Navbar() {
                 <img
                   className="h-20 w-auto"
                   src={
-                    location.pathname === "/info-reto" ? inspiraImg : innoImg
+                    location.pathname === "/info-reto"
+                      ? inspiraImg
+                      : location.pathname === "/info-reto-university"
+                      ? innoImgUni
+                      : innoImg
                   }
                   alt="Logo"
                 />
