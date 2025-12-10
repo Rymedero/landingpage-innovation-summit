@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { InfoTabsUniversity } from "./InfoTabsUniversity";
 import { Footer } from "../../../../components/layouts/Footer";
-import { Register } from "../../../InfoReto/components/Register";
+import { RegisterUni } from "./RegisterUni";
 
 
 
@@ -19,7 +19,7 @@ function InfoRetoUniversity() {
      >
         <InfoTabsUniversity />
      </motion.div>
-     <Register/>
+     <RegisterUni/>
      < Footer />
      
 
