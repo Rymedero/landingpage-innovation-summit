@@ -1,10 +1,10 @@
 import Tabs from "../../../../components/Tabs";
 import { Challenge } from "../../../InfoReto/components/TabsComponents/Challenge";
 import { Evaluation } from "../../../InfoReto/components/TabsComponents/Evaluation";
-import { PitchInnovation } from "../../../InfoReto/components/TabsComponents/PitchInnovation";
 import { DeliverablesUni } from "./components/DeliverablesUni";
 import { GuidelinesUni } from "./components/GuidelinesUni";
 import { ParticipationMechanismUni } from "./components/ParticipationMechanismUni";
+import { PitchInnovationUni } from "./components/PitchInnovationUni";
 import { TrainingScheduleUni } from "./components/TrainingScheduleUni";
 
 
@@ -18,7 +18,7 @@ export function InfoTabsUniversity() {
           { label: "Mecanismo de participación", content: <ParticipationMechanismUni />},
           { label: "Cronograma", content: <TrainingScheduleUni />},
           { label: "Sectores productivos", content: <Challenge />},
-          { label: "Pitch de innovación", content: < PitchInnovation />},
+          { label: "Pitch de innovación", content: < PitchInnovationUni />},
           { label: "Pautas a considerar", content: <GuidelinesUni />},
           { label: "Entregables", content: < DeliverablesUni />},
           { label: "Evaluación", content: < Evaluation />},

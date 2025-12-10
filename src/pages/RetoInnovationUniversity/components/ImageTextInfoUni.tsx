@@ -23,9 +23,14 @@ export function ImageTextInfoUni() {
               productivos estratégicos del país y sus megatendencias asociadas.
             </p>
           <div className="flex space-x-4 py-10">
-            <button className=" px-6 py-3 rounded-lg font-medium  transition-all duration-300 btn btn-primary mt-4 border-white border-2">
+            <a 
+              href="https://docs.google.com/forms/d/1ly2PRTiZofiUjDZEZT5e8Inqs-NjVC1DziOwbQporB0/edit" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className=" px-6 py-3 rounded-lg font-medium  transition-all duration-300 btn btn-primary mt-4 border-white border-2"
+            >
               ¡Regístrate ya!
-            </button>
+            </a>
           </div>
         </div>
         

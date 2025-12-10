@@ -3,7 +3,7 @@ import imag2 from "../../../assets/University/EY Evento-152.jpg";
 import imag3 from "../../../assets/University/EY Evento-64.jpg";
 import imag4 from "../../../assets/University/EY Evento-389.jpg";
 import imag5 from "../../../assets/University/EY Evento-218.jpg";
-import imag6 from "../../../assets/University/EY Evento-566.jpg";
+import imag6 from "../../../assets/University/EY Evento-190.jpg";
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";

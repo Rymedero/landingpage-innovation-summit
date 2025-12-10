@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import heroImg from "../../../assets/University/EY Evento-211.jpg";
-import inspiraLogo from "../../../assets/Logos INSPIRA-02.png";
+import inspiraLogo from "../../../assets/University/logo.png";
 
 export function ImageTextUni() {
 return (

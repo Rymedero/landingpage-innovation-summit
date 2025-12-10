@@ -3,6 +3,7 @@ import logo1 from "../../assets/EY_Logo_Beam_STFWC_Horizontal_Small_RGB_White_Ye
 import logo2 from "../../assets/Logos INSPIRA-02.png";
 import logo3 from "../../assets/Kuriosb-removebg-preview.png";
 import logo4 from "../../assets/LogoInnovation.png";
+import logo5 from "../../assets/University/logo.png";
 import { Link, useLocation } from "react-router-dom";
 
 
@@ -52,7 +53,7 @@ export function Footer() {
          )}
 
           <motion.img
-            src={logo2}
+            src={isUniversity ? logo5 : logo2}
             alt="Logo 4"
             className="w-56 h-56 object-contain px-4"
             whileHover={{ scale: 1.1 }}
