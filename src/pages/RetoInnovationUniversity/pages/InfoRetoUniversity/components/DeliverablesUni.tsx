@@ -18,7 +18,7 @@ export function DeliverablesUni() {
               link:
               <div className="mt-1 ml-4">
                 <a
-                  href="https://www.canva.com/design/DAG4m7jmK0k/ZMoU2Z8EIkN5jpuP7S1EwA/edit"
+                  href="https://www.canva.com/design/DAG6p3a8Nro/1oea4TWNPPOGK3NuFNtIjw/edit?utm_content=DAG6p3a8Nro&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
                   className="text-white underline hover:text-gray-200"
                 >
                   Abrir plantilla
@@ -48,7 +48,7 @@ export function DeliverablesUni() {
               <span className="font-semibold">1. Accede a la plantilla</span>
 
               <div className="ml-4 mt-1">
-                <a href="https://www.canva.com/design/DAG4m7jmK0k/ZMoU2Z8EIkN5jpuP7S1EwA/edit" className="text-white underline">
+                <a href="https://www.canva.com/design/DAG6p3a8Nro/1oea4TWNPPOGK3NuFNtIjw/edit?utm_content=DAG6p3a8Nro&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" className="text-white underline">
                   Haz clic aquí
                 </a>
                 <span className="ml-1">para abrir la plantilla</span>
