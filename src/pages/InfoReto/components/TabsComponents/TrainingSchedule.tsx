@@ -27,13 +27,13 @@ export function TrainingSchedule() {
                 
                     <tr>
                         <th className="text-gray-400">Taller de formación 1</th>
-                        <td className="text-gray-400">Martes 03 de febrero</td>
+                        <td className="text-gray-400">Martes 10 de febrero</td>
                         <td className="text-gray-400">8:00 am – 1:00 pm</td>
                     </tr>
                 
                     <tr>
                         <th className="text-gray-400">Taller de formación 2</th>
-                        <td className="text-gray-400">Martes 03 de marzo</td>
+                        <td className="text-gray-400">Martes 10 de marzo</td>
                         <td className="text-gray-400">8:00 am – 1:00 pm</td>
                         
                     </tr>
