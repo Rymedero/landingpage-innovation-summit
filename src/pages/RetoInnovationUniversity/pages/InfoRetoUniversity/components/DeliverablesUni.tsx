@@ -27,7 +27,7 @@ export function DeliverablesUni() {
             </li>
 
             <li className="px-4 py-2 text-gray-400">
-              2. Resumen ejecutivo del proyecto (máx. 1 página).
+              2. Resumen ejecutivo del proyecto (máx. 3 páginas).
             </li>
 
             <li className="px-4 py-2 text-gray-400">
