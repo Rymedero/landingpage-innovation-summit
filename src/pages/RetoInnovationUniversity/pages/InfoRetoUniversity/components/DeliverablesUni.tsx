@@ -63,7 +63,7 @@ export function DeliverablesUni() {
                   • Ve a Archivo - Hacer una copia - Presentación completa
                 </li>
                 <li>
-                  • Renombra el archivo con el nombre de tu equipo y colegio.
+                  • Renombra el archivo con el nombre de tu equipo y universidad.
                 </li>
               </ul>
             </li>

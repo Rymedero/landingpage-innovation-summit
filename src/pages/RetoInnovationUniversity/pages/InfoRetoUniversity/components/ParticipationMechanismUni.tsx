@@ -38,7 +38,7 @@ export function ParticipationMechanismUni() {
           <li className="flex-start group relative flex lg:flex-col">
             <div className="ml-6 lg:ml-0 lg:mt-5">
               <h3 className="text-xl font-bold text-primary before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500 text-center">
-                Mentorias
+                Mentorías
               </h3>
               <h4 className="mt-2 text-base text-gray-400 text-center">
                Dos sesiones de mentorías con especialistas que te ayudarán a: Validar tu idea, diseñar tu modelo de negocio y preparar tu Pitch.
