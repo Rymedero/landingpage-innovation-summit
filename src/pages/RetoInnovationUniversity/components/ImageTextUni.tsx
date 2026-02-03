@@ -28,7 +28,7 @@ return (
 A través de este desafío, los participantes desarrollarán proyectos capaces de <span className="text-white font-normal">resolver necesidades reales</span> y <span className="text-white font-normal">transformar sectores productivos clave</span>. Queremos impulsar tu creatividad, tu capacidad de innovación y tu talento para trabajar en equipo, porque sabemos que las soluciones con impacto nacen de mentes inspiradas.
         </p>
         <p className="text-gray-400 mb-4 text-justify">¿Estás listo para convertir tu idea en una realidad que marque la diferencia?
-¡Únete al Reto InspiraVe y sé parte del cambio!</p>
+        </p>
 
          <p className="text-white mb-4 text-justify font-bold ">¡Únete al Reto InspiraVe y sé parte del cambio!</p>
 

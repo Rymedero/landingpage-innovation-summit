@@ -90,12 +90,12 @@ export function Guidelines() {
             <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
 
               <li className="px-4 py-2 text-gray-400 leading-relaxed bg-indigo-800/10 rounded-xl">
-                <span className="font-semibold">4. Modelo</span>
+                <span className="font-semibold">4. Modelo de Negocio Básico</span>
 
                 <div className="ml-4 mt-1 text-gray-500">
                   • ¿Cómo funcionaría la empresa?
-                  <div>• ¿Qué recursos necesitan?</div>
-                  <div>• ¿Cuáles son los próximos pasos?</div>
+                  <div>• ¿Quiénes serían los clientes?</div>
+                  <div>• ¿Cómo se generaría valor?</div>
                 </div>
               </li>
 
