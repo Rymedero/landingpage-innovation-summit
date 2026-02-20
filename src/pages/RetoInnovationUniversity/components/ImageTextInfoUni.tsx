@@ -1,5 +1,6 @@
 import imag1 from "../../../assets/Inspira Universidades.jpg";
 import { motion } from "framer-motion";
+import ModalClose from "../../../components/ModalClose";
 
 
 
@@ -23,14 +24,39 @@ export function ImageTextInfoUni() {
               productivos estratégicos del país y sus megatendencias asociadas.
             </p>
           <div className="flex space-x-4 py-10">
-            <a 
-              href="https://docs.google.com/forms/d/1ly2PRTiZofiUjDZEZT5e8Inqs-NjVC1DziOwbQporB0/edit" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className=" px-6 py-3 rounded-lg font-medium  transition-all duration-300 btn btn-primary mt-4 border-white border-2"
+            <ModalClose
+              id="register-uni-modal"
+              trigger={
+                <button
+                  type="button"
+                  className="px-6 py-3 rounded-lg font-medium transition-all duration-300 btn btn-primary mt-4 border-white border-2"
+                >
+                  ¡Regístrate ya!
+                </button>
+              }
             >
-              ¡Regístrate ya!
-            </a>
+              <svg
+                className="w-12 h-12 text-red-600 mx-auto"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <h3 className="text-xl font-normal text-black mt-3 mb-2">
+                ¡El periodo de registro ha finalizado!
+              </h3>
+              <p className="text-gray-500 mb-6">
+                Te invitamos a estar atento a nuestras redes sociales para futuras convocatorias.
+              </p>
+            </ModalClose>
           </div>
         </div>
         
