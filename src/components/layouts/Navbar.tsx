@@ -1,15 +1,36 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import innoImg from "../../assets/LogoInnovation.png";
 import inspiraImg from "../../assets/Logos INSPIRA-02.png";
 import innoImgUni from "../../assets/University/logo.png";
+
+const navigationItems = [
+  {
+    href: "/",
+    label: "Inicio",
+  },
+  {
+    href: "/reto-innovation",
+    label: "Reto InspiraVe",
+    subtitle: "Intercolegial",
+  },
+  {
+    href: "/reto-innovation-university",
+    label: "Reto InspiraVe",
+    subtitle: "Interuniversitario",
+  },
+  {
+    href: "/summit2026-foco",
+    label: "InnovEYtion",
+    subtitle: "Summit 2026",
+  },
+];
 
 export function Navbar() {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [offset, setOffset] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
-
 
   useEffect(() => {
     const onScroll = () => {
@@ -22,79 +43,98 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 768) {
+        setMobileOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [mobileOpen]);
+
+  const logoSrc =
+    location.pathname === "/info-reto"
+      ? inspiraImg
+      : location.pathname === "/info-reto-university"
+        ? innoImgUni
+        : innoImg;
+
+  const navBaseClass =
+    "transition-colors duration-200 px-3 py-2 text-md font-medium";
+  const mobileLinkClass =
+    "block rounded-xl px-4 py-3 text-base font-medium transition-colors duration-200";
+
   return (
     <>
+      {mobileOpen ? (
+        <button
+          type="button"
+          aria-label="Cerrar menu"
+          className="fixed inset-0 top-20 z-40 bg-slate-950/70 backdrop-blur-sm md:hidden"
+          onClick={() => setMobileOpen(false)}
+        />
+      ) : null}
+
       <nav
+        id="site-navbar"
         className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
           scrolled
             ? "bg-gray-900 bg-opacity-90 backdrop-blur-md shadow-md"
             : "bg-transparent"
         }`}
-        style={{ top: `-${offset}px`, transform: `translateY(${offset}px)` }}
+        style={
+          mobileOpen
+            ? undefined
+            : { top: `-${offset}px`, transform: `translateY(${offset}px)` }
+        }
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20">
             <div className="flex items-center">
-              <a href="#" className="flex-shrink-0 flex items-center">
+              <Link to="/" className="flex-shrink-0 flex items-center">
                 <img
                   className="h-20 w-auto"
-                  src={
-                    location.pathname === "/info-reto"
-                      ? inspiraImg
-                      : location.pathname === "/info-reto-university"
-                      ? innoImgUni
-                      : innoImg
-                  }
+                  src={logoSrc}
                   alt="Logo"
                 />
-              </a>
+              </Link>
             </div>
 
             <div className="hidden md:flex md:items-center md:justify-center md:space-x-10">
-              <a
-                href="/"
-                className={`${
-                  location.pathname === "/" ? "text-yellow-400" : "text-white"
-                } hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center`}
-              >
-                Inicio
-              </a>
-              <a
-                href="/reto-innovation"
-                className={`${
-                  location.pathname === "/reto-innovation"
-                    ? "text-yellow-400"
-                    : "text-white"
-                } hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center text-center`}
-              >
-                Reto InspiraVe <br></br>
-                <h1 className="items-center text-center">Intercolegial</h1>
-              </a>
-              <a
-                href="/reto-innovation-university"
-                className={`${
-                  location.pathname === "/reto-innovation-university"
-                    ? "text-yellow-400"
-                    : "text-white"
-                } hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center text-center`}
-              >
-                Reto InspiraVe <br></br>
-                <h1 className="text-center">Interuniversitario</h1>
-              </a>
-              <a
-
-              href="/summit2026-foco"
-                className={`${
-                  location.pathname === "/summit2026-foco"
-                    ? "text-yellow-400"
-                    : "text-white"
-                } hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center text-center`}
-              >
-                InnovEYtion <br></br>
-                <h1 className="text-center">Summit 2026</h1>
-              </a>
-
+              {navigationItems.map((item) => (
+                <NavLink
+                  key={item.href}
+                  to={item.href}
+                  className={({ isActive }) =>
+                    `${navBaseClass} ${
+                      isActive ? "text-yellow-400" : "text-white hover:text-yellow-400"
+                    } ${item.subtitle ? "text-center" : "items-center"}`
+                  }
+                >
+                  {item.label}
+                  {item.subtitle ? <><br /><span>{item.subtitle}</span></> : null}
+                </NavLink>
+              ))}
             </div>
+
             <div className="flex items-center">
               <div className="flex items-center md:hidden">
                 <button
@@ -102,8 +142,9 @@ export function Navbar() {
                   onClick={() => setMobileOpen(!mobileOpen)}
                   className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-200 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                   aria-expanded={mobileOpen}
+                  aria-controls="mobile-menu"
                 >
-                  <span className="sr-only">Open main menu</span>
+                  <span className="sr-only">Abrir menu principal</span>
                   {!mobileOpen ? (
                     <svg
                       className="block h-6 w-6"
@@ -144,35 +185,29 @@ export function Navbar() {
         </div>
 
         <div
-          className={`${mobileOpen ? "block" : "hidden"} md:hidden`}
+          className={`${mobileOpen ? "block" : "hidden"} absolute left-0 right-0 top-full z-50 px-4 pb-4 md:hidden`}
           id="mobile-menu"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-800 bg-opacity-90">
-            <a
-              href="/"
-              className="text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Inicio
-            </a>
-            <a
-              href="/reto-innovation"
-              className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Reto InspiraVe intercolegial
-            </a>
-             <a
-              href="/reto-innovation-university"
-              className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Reto InspiraVe interuniversitario
-            </a>
-            <a
-              aria-disabled="true"
-              href="/summit2026-foco"
-              className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-            >
-              InnovEYtion Summit 2026
-            </a>
+          <div className="rounded-2xl border border-white/10 bg-gray-900/95 p-3 shadow-2xl backdrop-blur-md">
+            {navigationItems.map((item) => (
+              <NavLink
+                key={item.href}
+                to={item.href}
+                onClick={() => setMobileOpen(false)}
+                className={({ isActive }) =>
+                  `${mobileLinkClass} ${
+                    isActive
+                      ? "bg-yellow-400/10 text-yellow-400"
+                      : "text-gray-200 hover:bg-white/5 hover:text-white"
+                  }`
+                }
+              >
+                <span className="block">{item.label}</span>
+                {item.subtitle ? (
+                  <span className="block text-sm text-inherit/80">{item.subtitle}</span>
+                ) : null}
+              </NavLink>
+            ))}
           </div>
         </div>
       </nav>

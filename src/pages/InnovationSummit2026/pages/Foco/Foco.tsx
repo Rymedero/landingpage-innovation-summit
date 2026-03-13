@@ -19,22 +19,49 @@ function Foco(){
         const targetId = hash.replace("#", "");
         let attempts = 0;
         const maxAttempts = 30;
+        let frameId: number | null = null;
+        const timeoutIds: number[] = [];
+
+        const getNavbarOffset = () => {
+            const navbar = document.getElementById("site-navbar");
+            return navbar ? navbar.getBoundingClientRect().height + 12 : 92;
+        };
 
         const scrollToHashTarget = () => {
             const target = document.getElementById(targetId);
 
             if (target) {
-                target.scrollIntoView({ block: "start" });
+                const targetTop = window.scrollY + target.getBoundingClientRect().top;
+                const scrollTop = Math.max(targetTop - getNavbarOffset(), 0);
+
+                window.scrollTo({ top: scrollTop, behavior: "auto" });
                 return;
             }
 
             if (attempts < maxAttempts) {
                 attempts += 1;
-                requestAnimationFrame(scrollToHashTarget);
+                frameId = requestAnimationFrame(scrollToHashTarget);
             }
         };
 
+        const handleLoad = () => {
+            scrollToHashTarget();
+        };
+
         scrollToHashTarget();
+
+        timeoutIds.push(window.setTimeout(scrollToHashTarget, 200));
+        timeoutIds.push(window.setTimeout(scrollToHashTarget, 600));
+        window.addEventListener("load", handleLoad);
+
+        return () => {
+            if (frameId !== null) {
+                cancelAnimationFrame(frameId);
+            }
+
+            timeoutIds.forEach((timeoutId) => window.clearTimeout(timeoutId));
+            window.removeEventListener("load", handleLoad);
+        };
     }, [hash]);
 
     return(

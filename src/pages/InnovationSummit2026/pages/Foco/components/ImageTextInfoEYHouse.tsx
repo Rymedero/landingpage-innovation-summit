@@ -4,10 +4,9 @@ import EYHouse from "../../../../../assets/DemoDay/EY house.jpg";
 export function ImageTextInfoEYHouse() {
   return (
     <div
-      id="ey-house"
-      className="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 lg:py-16 py-8 scroll-mt-28"
+      className="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 lg:py-16 py-8"
     >
-      <h2 className="text-4xl tracking-tight font-bold leading-none">
+      <h2 id="ey-house" className="text-4xl tracking-tight font-bold leading-none scroll-mt-28">
         <span className="text-primary">EY</span>{" "}
         <span className="text-white">House</span>
       </h2>
