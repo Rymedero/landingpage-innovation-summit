@@ -4,8 +4,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 const sections = [
   { label: "FOCO", path: "/summit2026-foco", icon: Target },
-  { label: "SALAS", path: "/summit2026-salas", icon: DoorOpen },
-  { label: "CONVOCADOS", path: "/summit2026-convocados", icon: Users },
+  { label: "SALAS", path: "/summit2026-salas", icon: DoorOpen, disabled: true },
+  { label: "CONVOCADOS", path: "/summit2026-convocados", icon: Users, disabled: true },
 ];
 
 export function SubMenuSummit() {
@@ -24,12 +24,24 @@ export function SubMenuSummit() {
       <nav className="flex w-full items-center justify-between gap-2 sm:inline-flex sm:w-auto sm:justify-start sm:gap-4">
         {sections.map((section, index) => {
           const isActive = location.pathname === section.path;
+          const isDisabled = section.disabled === true;
           const Icon = section.icon;
           return (
             <Fragment key={section.path}>
               <button
-                onClick={() => navigate(section.path)}
-                className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-1 text-[10px] sm:flex-none sm:text-sm font-bold tracking-[0.1em] sm:tracking-[0.16em] uppercase transition-colors duration-200 cursor-pointer whitespace-nowrap ${
+                type="button"
+                onClick={() => {
+                  if (!isDisabled) {
+                    navigate(section.path);
+                  }
+                }}
+                disabled={isDisabled}
+                aria-disabled={isDisabled}
+                className={`flex min-w-0 flex-1 flex-col items-center justify-center gap-1 text-[10px] sm:flex-none sm:text-sm font-bold tracking-[0.1em] sm:tracking-[0.16em] uppercase transition-colors duration-200 whitespace-nowrap ${
+                  isDisabled
+                    ? "text-white/30 cursor-not-allowed"
+                    : "cursor-pointer"
+                } ${
                   isActive
                     ? "text-yellow-400"
                     : "text-white/60 hover:text-white"
