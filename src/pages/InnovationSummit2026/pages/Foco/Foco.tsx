@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { ImageTextInfoDemoDay } from "./components/ImageTextInfoDemoDay";
 import { CarouselLogos } from "./components/CarouselLogos";
@@ -13,14 +13,13 @@ import { Register } from "./components/Register";
 function Foco(){
     const { hash } = useLocation();
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (!hash) return;
 
         const targetId = hash.replace("#", "");
         let attempts = 0;
-        const maxAttempts = 30;
+        const maxAttempts = 20;
         let frameId: number | null = null;
-        const timeoutIds: number[] = [];
 
         const getNavbarOffset = () => {
             const navbar = document.getElementById("site-navbar");
@@ -33,8 +32,11 @@ function Foco(){
             if (target) {
                 const targetTop = window.scrollY + target.getBoundingClientRect().top;
                 const scrollTop = Math.max(targetTop - getNavbarOffset(), 0);
+                const isAlreadyAligned = Math.abs(window.scrollY - scrollTop) < 2;
 
-                window.scrollTo({ top: scrollTop, behavior: "auto" });
+                if (!isAlreadyAligned) {
+                    window.scrollTo({ top: scrollTop, behavior: "auto" });
+                }
                 return;
             }
 
@@ -44,23 +46,12 @@ function Foco(){
             }
         };
 
-        const handleLoad = () => {
-            scrollToHashTarget();
-        };
-
         scrollToHashTarget();
-
-        timeoutIds.push(window.setTimeout(scrollToHashTarget, 200));
-        timeoutIds.push(window.setTimeout(scrollToHashTarget, 600));
-        window.addEventListener("load", handleLoad);
 
         return () => {
             if (frameId !== null) {
                 cancelAnimationFrame(frameId);
             }
-
-            timeoutIds.forEach((timeoutId) => window.clearTimeout(timeoutId));
-            window.removeEventListener("load", handleLoad);
         };
     }, [hash]);
 
