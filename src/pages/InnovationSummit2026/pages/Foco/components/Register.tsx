@@ -4,10 +4,10 @@ export function Register() {
 			<div className="mx-auto flex w-full max-w-5xl flex-col items-center justify-between gap-4 rounded-2xl border border-white/20 bg-gradient-to-r from-primary/25 via-slate-900/80 to-primary/25 p-6 shadow-xl backdrop-blur-sm md:flex-row md:gap-6 md:p-8">
 				<div className="text-center md:text-left">
 					<h3 className="mt-2 text-xl font-bold text-white sm:text-2xl">
-						Lleva la experiencia contigo y mantente al día
+						Vive la experiencia InnovEYtion Summit ahora
 					</h3>
 					<p className="mt-1 text-sm text-slate-200/90 sm:text-base">
-						Descarga la app oficial para conocer novedades, agenda y contenidos del Summit.
+						Descarga la app oficial y descubre novedades, agenda y mucho más ...
 					</p>
 				</div>
 
