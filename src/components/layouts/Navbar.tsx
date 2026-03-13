@@ -82,23 +82,18 @@ export function Navbar() {
                 <h1 className="text-center">Interuniversitario</h1>
               </a>
               <a
-                aria-disabled="true"
-                className="text-white hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center opacity-35"
+
+              href="/summit2026-foco"
+                className={`${
+                  location.pathname === "/summit2026-foco"
+                    ? "text-yellow-400"
+                    : "text-white"
+                } hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center text-center`}
               >
-                Salas
+                InnovEYtion <br></br>
+                <h1 className="text-center">Summit 2026</h1>
               </a>
-              <a
-                aria-disabled="true"
-                className="text-white hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center opacity-35"
-              >
-                Focos
-              </a>
-              <a
-                aria-disabled="true"
-                className="text-white disabled hover:text-yellow-400 transition-colors duration-200 px-3 py-2 text-md font-medium items-center opacity-35"
-              >
-                Convocados
-              </a>
+
             </div>
             <div className="flex items-center">
               <div className="flex items-center md:hidden">
@@ -173,24 +168,10 @@ export function Navbar() {
             </a>
             <a
               aria-disabled="true"
-              href="#"
+              href="/summit2026-foco"
               className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
             >
-              Salas
-            </a>
-            <a
-              aria-disabled="true"
-              href="#"
-              className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Focos
-            </a>
-            <a
-              aria-disabled="true"
-              href="#"
-              className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-            >
-              Convocados
+              InnovEYtion Summit 2026
             </a>
           </div>
         </div>

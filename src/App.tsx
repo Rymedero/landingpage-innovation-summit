@@ -7,6 +7,9 @@ import RetoInnovation from './pages/RetoInnovation/RetoInnovation'
 import InfoReto from './pages/InfoReto/InfoReto'
 import RetoInnovationUniversity from './pages/RetoInnovationUniversity/RetoInnovationUniversity'
 import InfoRetoUniversity from './pages/RetoInnovationUniversity/pages/InfoRetoUniversity/InfoRetoUniversity'
+import Foco from './pages/InnovationSummit2026/pages/Foco/Foco'
+import Salas from './pages/InnovationSummit2026/pages/Salas/Salas'
+import Convocados from './pages/InnovationSummit2026/pages/Convocados/Convocados'
 
 
 function App() {
@@ -24,6 +27,9 @@ function App() {
           <Route path="/info-reto" element={<InfoReto />} />
           <Route path="/reto-innovation-university" element={<RetoInnovationUniversity />} />
           <Route path="/info-reto-university" element={<InfoRetoUniversity />} />
+          <Route path="/summit2026-foco" element={<Foco />} />
+          <Route path="/summit2026-salas" element={<Salas />} />
+          <Route path="/summit2026-convocados" element={<Convocados />} />
         </Routes>
       </Router>
     </div>
