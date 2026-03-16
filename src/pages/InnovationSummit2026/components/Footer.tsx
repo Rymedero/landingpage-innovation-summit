@@ -16,7 +16,7 @@ export function FooterSummit() {
               style={{ textAlign: "justify" }}
             >
               <span className="text-white font-semibold">Lo que viene</span>{" "}
-              sera extraordinario. Lo que estamos construyendo juntos dara forma
+              sera extraordinario. Lo que estamos construyendo juntos dará forma
               al <span className="text-white font-semibold">futuro </span>
               de las siguientes generaciones.
               <br />
