@@ -4,6 +4,7 @@ import { ImageTextInfoDemoDay } from "./components/ImageTextInfoDemoDay";
 import { CarouselLogos } from "./components/CarouselLogos";
 import { SubMenuSummit } from "../../components/SubMenuSummit";
 import { ImageTextInfoEYHouse } from "./components/ImageTextInfoEYHouse";
+import { GiftIdeaVenezuela } from "./components/GiftIdeaVenezuela";
 import { FooterSummit } from "../../components/Footer";
 import { Register } from "./components/Register";
 
@@ -61,6 +62,7 @@ function Foco(){
             <ImageTextInfoDemoDay />
             <CarouselLogos />
             <ImageTextInfoEYHouse />
+            <GiftIdeaVenezuela />
             <Register />
             <FooterSummit />
         </div>
