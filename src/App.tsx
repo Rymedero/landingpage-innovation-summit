@@ -11,7 +11,7 @@ import Foco from './pages/InnovationSummit2026/pages/Foco/Foco'
 import Salas from './pages/InnovationSummit2026/pages/Salas/Salas'
 import Convocados from './pages/InnovationSummit2026/pages/Convocados/Convocados'
 import GiftIdeaVzla from './pages/GiftIdeaVzla/GiftIdeaVzla'
-import { ProtectedRoute } from './pages/InnovationSummit2026/pages/Salas/components/protectedRoute'
+import { ProtectedRoute } from './pages/InnovationSummit2026/pages/Salas/components/ProtectedRoute'
 
 function AppRoutes() {
   const location = useLocation();
