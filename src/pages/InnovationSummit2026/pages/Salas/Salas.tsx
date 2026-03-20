@@ -2,16 +2,21 @@ import { SubMenuSummit } from "../../components/SubMenuSummit";
 import { FooterSummit } from "../../components/Footer";
 
 // IDs de los videos de YouTube
+
+const VITE_ID_VIDEO_1 = import.meta.env.VITE_ID_VIDEO_1;
+const VITE_ID_VIDEO_2 = import.meta.env.VITE_ID_VIDEO_2;
+const VITE_ID_VIDEO_3 = import.meta.env.VITE_ID_VIDEO_3;
+
 const YOUTUBE_LIVES = [
-  { id: "y11kYGJYpmE", title: "AUDITORIO - MAIN ARENA" },
-  { id: "SMkAE7dygj0", title: "SALA FUSION - DEEP TECH RING" },
-  { id: "VIDEO_ID_3", title: "SALA PARADOX - RÉPLICA DEL MAIN ARENA" },
+  { id: VITE_ID_VIDEO_1, title: "AUDITORIO - MAIN ARENA" },
+  { id: VITE_ID_VIDEO_2, title: "SALA FUSION - DEEP TECH RING" },
+  { id: VITE_ID_VIDEO_3, title: "SALA PARADOX - RÉPLICA DEL MAIN ARENA" },
 ];
 function Salas() {
   return (
     <div className="w-full overflow-x-hidden flex flex-col items-center justify-center pt-24 pb-0 bg-gray-900/50 rounded-2xl backdrop-blur-sm " >
       {/* Navegación superior */}
-      <SubMenuSummit /> 
+      <SubMenuSummit />
 
       {/* Contenedor de Videos */}
       <main className="w-full max-w-4xl px-4 py-12 flex flex-col gap-12">
