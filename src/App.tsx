@@ -11,6 +11,7 @@ import Foco from './pages/InnovationSummit2026/pages/Foco/Foco'
 import Salas from './pages/InnovationSummit2026/pages/Salas/Salas'
 import Convocados from './pages/InnovationSummit2026/pages/Convocados/Convocados'
 import GiftIdeaVzla from './pages/GiftIdeaVzla/GiftIdeaVzla'
+import { ProtectedRoute } from './pages/InnovationSummit2026/pages/Salas/components/protectedRoute'
 
 function AppRoutes() {
   const location = useLocation();
@@ -26,7 +27,7 @@ function AppRoutes() {
         <Route path="/reto-innovation-university" element={<RetoInnovationUniversity />} />
         <Route path="/info-reto-university" element={<InfoRetoUniversity />} />
         <Route path="/summit2026-foco" element={<Foco />} />
-        <Route path="/summit2026-salas" element={<Salas />} />
+        <Route path="/summit2026-salas"element={<ProtectedRoute><Salas /></ProtectedRoute>} />
         <Route path="/summit2026-convocados" element={<Convocados />} />
         <Route path="/regalale-una-idea" element={<GiftIdeaVzla />} />
       </Routes>
@@ -39,8 +40,8 @@ function App() {
 
   return (
 
-   
-     <div data-theme="mytheme" className="App bg-transparent relative min-h-screen">
+
+    <div data-theme="mytheme" className="App bg-transparent relative min-h-screen">
       <FirefliesBackground />
       <Router>
         <AppRoutes />
