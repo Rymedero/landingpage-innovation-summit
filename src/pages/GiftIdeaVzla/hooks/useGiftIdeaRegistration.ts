@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const REGISTRO_URL = "http://127.0.0.1:8000/registro";
+const REGISTRO_URL = "https://idea-venezuela-frcxete6guc9c8fy.canadacentral-01.azurewebsites.net/registro";
 
 export type GiftIdeaRegistrationPayload = {
   nombre: string;
