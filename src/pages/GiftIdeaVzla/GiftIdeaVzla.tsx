@@ -126,7 +126,7 @@ function GiftIdeaVzla() {
 						<div className="grid gap-5 sm:grid-cols-2">
 							<label className="block">
 								<span className="mb-2 block text-sm font-semibold text-white">
-									Nombre
+									Nombre <span className="text-red-400">*</span>
 								</span>
 								<input
 									required
@@ -145,7 +145,7 @@ function GiftIdeaVzla() {
 
 							<label className="block">
 								<span className="mb-2 block text-sm font-semibold text-white">
-									Apellido
+									Apellido <span className="text-red-400">*</span>
 								</span>
 								<input
 									required
@@ -164,7 +164,7 @@ function GiftIdeaVzla() {
 
 							<label className="block sm:col-span-2">
 								<span className="mb-2 block text-sm font-semibold text-white">
-									Correo electrónico
+									Correo electrónico <span className="text-red-400">*</span>
 								</span>
 								<input
 									required
@@ -183,7 +183,7 @@ function GiftIdeaVzla() {
 
 							<label className="block sm:col-span-2">
 								<span className="mb-2 block text-sm font-semibold text-white">
-									Sector
+									Sector <span className="text-red-400">*</span>
 								</span>
 								<div ref={sectorDropdownRef} className="relative">
 									<input
@@ -245,7 +245,7 @@ function GiftIdeaVzla() {
 
 							<label className="block sm:col-span-2">
 								<span className="mb-2 block text-sm font-semibold text-white">
-									Ideas
+									Ideas <span className="text-red-400">*</span>
 								</span>
 								<textarea
 									required

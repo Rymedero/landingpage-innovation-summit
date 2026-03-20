@@ -7,6 +7,7 @@ import { ImageTextInfoEYHouse } from "./components/ImageTextInfoEYHouse";
 import { GiftIdeaVenezuela } from "./components/GiftIdeaVenezuela";
 import { FooterSummit } from "../../components/Footer";
 import { Register } from "./components/Register";
+import { EyFourSection } from "./components/EyFourSection";
 
 
 
@@ -62,6 +63,7 @@ function Foco(){
             <ImageTextInfoDemoDay />
             <CarouselLogos />
             <ImageTextInfoEYHouse />
+            <EyFourSection />
             <GiftIdeaVenezuela />
             <Register />
             <FooterSummit />
