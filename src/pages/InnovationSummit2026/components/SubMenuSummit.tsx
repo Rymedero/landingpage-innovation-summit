@@ -1,16 +1,25 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { ArrowRight, DoorOpen, Target, Users } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
+import { LoginModal } from "../pages/Salas/components/SalaLogin";
+
 const sections = [
   { label: "FOCO", path: "/summit2026-foco", icon: Target },
-  { label: "SALAS", path: "/summit2026-salas", icon: DoorOpen, disabled: true },
+  { label: "SALAS", path: "/summit2026-salas", icon: DoorOpen, disabled: false },
   { label: "CONVOCADOS", path: "/summit2026-convocados", icon: Users, disabled: true },
 ];
 
 export function SubMenuSummit() {
   const navigate = useNavigate();
   const location = useLocation();
+
+  //estado para login
+  const [showLogin, setShowLogin] = useState(false);
+  const [pendingRoute, setPendingRoute] = useState<string | null>(null);
+
+  //fake auth
+  const isAuthenticated = sessionStorage.getItem("auth") === "true";
 
   return (
     <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 mt-8 md:mt-10">
@@ -21,19 +30,31 @@ export function SubMenuSummit() {
           100% { transform: translateX(0); opacity: 0.55; }
         }
       `}</style>
+
       <nav className="flex w-full items-center justify-between gap-2 sm:inline-flex sm:w-auto sm:justify-start sm:gap-4">
         {sections.map((section, index) => {
           const isActive = location.pathname === section.path;
           const isDisabled = section.disabled === true;
           const Icon = section.icon;
+
           return (
             <Fragment key={section.path}>
               <button
                 type="button"
                 onClick={() => {
-                  if (!isDisabled) {
-                    navigate(section.path);
+                  if (isDisabled) return;
+
+                  //SALAS
+                  if (
+                    section.path === "/summit2026-salas" &&
+                    !isAuthenticated
+                  ) {
+                    setPendingRoute(section.path);
+                    setShowLogin(true);
+                    return;
                   }
+
+                  navigate(section.path);
                 }}
                 disabled={isDisabled}
                 aria-disabled={isDisabled}
@@ -55,6 +76,7 @@ export function SubMenuSummit() {
                   className="sm:h-5 sm:w-5"
                 />
               </button>
+
               {index < sections.length - 1 && (
                 <span
                   className="relative flex w-8 sm:w-16 items-center"
@@ -75,6 +97,18 @@ export function SubMenuSummit() {
           );
         })}
       </nav>
+
+      {/* 🔹 Modal */}
+      <LoginModal
+        isOpen={showLogin}
+        onClose={() => setShowLogin(false)}
+        onSuccess={() => {
+          if (pendingRoute) {
+            navigate(pendingRoute);
+            setPendingRoute(null);
+          }
+        }}
+      />
     </div>
   );
 }
