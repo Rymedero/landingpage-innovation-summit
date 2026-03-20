@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { ArrowRight, DoorOpen, Target, Users } from "lucide-react";
+import { ArrowRight, DoorOpen, Target} from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 import { LoginModal } from "../pages/Salas/components/SalaLogin";
@@ -7,7 +7,6 @@ import { LoginModal } from "../pages/Salas/components/SalaLogin";
 const sections = [
   { label: "FOCO", path: "/summit2026-foco", icon: Target },
   { label: "SALAS", path: "/summit2026-salas", icon: DoorOpen, disabled: false },
-  { label: "CONVOCADOS", path: "/summit2026-convocados", icon: Users, disabled: true },
 ];
 
 export function SubMenuSummit() {
