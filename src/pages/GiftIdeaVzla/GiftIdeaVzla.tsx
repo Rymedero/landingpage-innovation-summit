@@ -386,7 +386,7 @@ function GiftIdeaVzla() {
 
 						{/* Cabecera del Modal */}
 						<div className="flex items-center justify-between border-b border-white/10 px-6 py-5">
-							<h3 className="text-xl font-semibold text-white">Términos y Condiciones</h3>
+							<h3 className="text-xl font-semibold text-white">Términos y Condiciones Programa "Regálale una idea a Venezuela"</h3>
 							<button
 								type="button"
 								onClick={() => setIsTermsModalOpen(false)}
