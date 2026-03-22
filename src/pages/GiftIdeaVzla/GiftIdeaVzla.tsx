@@ -47,7 +47,7 @@ function GiftIdeaVzla() {
 	const [isSectorOpen, setIsSectorOpen] = useState(false);
 
 	// Nuevos estados para Términos y Condiciones
-	const [acceptedTerms, setAcceptedTerms] = useState(false);
+	const [acceptedTerms, setAcceptedTerms] = useState(true);
 	const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
 
 	const sectorDropdownRef = useRef<HTMLDivElement | null>(null);
