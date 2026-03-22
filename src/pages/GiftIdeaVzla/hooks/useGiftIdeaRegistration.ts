@@ -131,7 +131,7 @@ function validatePayload(payload: GiftIdeaRegistrationPayload): string | null {
   }
 
   const vocacionLength = payload.visionVocacionPais.trim().length;
-  if (vocacionLength < VOCACION_MIN_LENGTH || vocacionLength > VOCACION_MAX_LENGTH) {
+  if (vocacionLength > 0 && (vocacionLength < VOCACION_MIN_LENGTH || vocacionLength > VOCACION_MAX_LENGTH)) {
     return `Visión o vocación del país: debe tener entre ${VOCACION_MIN_LENGTH} y ${VOCACION_MAX_LENGTH} caracteres.`;
   }
 

@@ -290,10 +290,9 @@ function GiftIdeaVzla() {
 
 							<label className="block sm:col-span-2">
 								<span className="mb-2 block text-sm font-semibold text-white">
-									Visión o vocación del país <span className="text-red-400">*</span>
+									Visión o vocación del país <span className="text-slate-400">(opcional)</span>
 								</span>
 								<textarea
-									required
 									minLength={VOCACION_MIN_LENGTH}
 									maxLength={VOCACION_MAX_LENGTH}
 									rows={4}
@@ -305,7 +304,7 @@ function GiftIdeaVzla() {
 										}))
 									}
 									className="w-full resize-y rounded-xl border border-white/20 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary"
-									placeholder="Comparte cómo imaginas el futuro de Venezuela y cómo tu idea puede contribuir a ese camino (opcional)."
+									placeholder="Comparte cómo imaginas el futuro de Venezuela y cómo tu idea puede contribuir a ese camino."
 								/>
 							</label>
 
