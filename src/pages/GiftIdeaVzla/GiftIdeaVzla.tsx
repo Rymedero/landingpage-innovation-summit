@@ -36,6 +36,11 @@ const sectorOptions = [
 	"Infraestructura",
 ];
 
+const IDEAS_MIN_LENGTH = 150;
+const IDEAS_MAX_LENGTH = 800;
+const VOCACION_MIN_LENGTH = 150;
+const VOCACION_MAX_LENGTH = 400;
+
 function GiftIdeaVzla() {
 	const [formData, setFormData] = useState<FormState>(initialState);
 	const [submitted, setSubmitted] = useState(false);
@@ -268,6 +273,8 @@ function GiftIdeaVzla() {
 								</span>
 								<textarea
 									required
+									minLength={IDEAS_MIN_LENGTH}
+									maxLength={IDEAS_MAX_LENGTH}
 									rows={3}
 									value={formData.ideas}
 									onChange={(event) =>
@@ -277,15 +284,18 @@ function GiftIdeaVzla() {
 										}))
 									}
 									className="w-full resize-y rounded-xl border border-white/20 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary"
-									placeholder="Cuéntanos tu idea principal"
+									placeholder="Describe tu idea de manera concreta: ¿qué problema resuelve y cómo beneficia al país? (150–800 caracteres)."
 								/>
 							</label>
 
 							<label className="block sm:col-span-2">
 								<span className="mb-2 block text-sm font-semibold text-white">
-									Visión o vocación del país <span className="text-slate-400">(opcional)</span>
+									Visión o vocación del país <span className="text-red-400">*</span>
 								</span>
 								<textarea
+									required
+									minLength={VOCACION_MIN_LENGTH}
+									maxLength={VOCACION_MAX_LENGTH}
 									rows={4}
 									value={formData.visionVocacionPais}
 									onChange={(event) =>
@@ -295,7 +305,7 @@ function GiftIdeaVzla() {
 										}))
 									}
 									className="w-full resize-y rounded-xl border border-white/20 bg-slate-950/70 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-primary"
-									placeholder="Describe la visión o vocación de país que impulsa tu propuesta"
+									placeholder="Comparte cómo imaginas el futuro de Venezuela y cómo tu idea puede contribuir a ese camino (opcional)."
 								/>
 							</label>
 

@@ -26,6 +26,11 @@ type BackendValidationErrorItem = {
   };
 };
 
+const IDEAS_MIN_LENGTH = 150;
+const IDEAS_MAX_LENGTH = 800;
+const VOCACION_MIN_LENGTH = 150;
+const VOCACION_MAX_LENGTH = 400;
+
 const FIELD_LABELS: Record<string, string> = {
   nombre: "Nombre",
   apellido: "Apellido",
@@ -47,6 +52,11 @@ function translateValidationMessage(rawMsg: string, fieldLabel: string): string 
   const minCharsMatch = rawMsg.match(/at least\s+(\d+)\s+characters?/i);
   if (minCharsMatch) {
     return `${fieldLabel}: debe tener al menos ${minCharsMatch[1]} caracteres.`;
+  }
+
+  const maxCharsMatch = rawMsg.match(/at most\s+(\d+)\s+characters?/i);
+  if (maxCharsMatch) {
+    return `${fieldLabel}: debe tener como máximo ${maxCharsMatch[1]} caracteres.`;
   }
 
   if (/field required/i.test(rawMsg)) {
@@ -91,6 +101,10 @@ function build422FriendlyMessage(body: unknown): string | null {
         return `${fieldLabel}: debe tener al menos ${limit} caracteres.`;
       }
 
+      if (/at most|ensure this value has at most/i.test(rawMsg) && typeof limit === "number") {
+        return `${fieldLabel}: debe tener como máximo ${limit} caracteres.`;
+      }
+
       if (/field required/i.test(rawMsg)) {
         return `${fieldLabel}: es obligatorio.`;
       }
@@ -108,6 +122,20 @@ function build422FriendlyMessage(body: unknown): string | null {
   }
 
   return `Por favor corrige los siguientes campos: ${fieldMessages.join(" ")}`;
+}
+
+function validatePayload(payload: GiftIdeaRegistrationPayload): string | null {
+  const ideasLength = payload.ideas.trim().length;
+  if (ideasLength < IDEAS_MIN_LENGTH || ideasLength > IDEAS_MAX_LENGTH) {
+    return `Ideas: debe tener entre ${IDEAS_MIN_LENGTH} y ${IDEAS_MAX_LENGTH} caracteres.`;
+  }
+
+  const vocacionLength = payload.visionVocacionPais.trim().length;
+  if (vocacionLength < VOCACION_MIN_LENGTH || vocacionLength > VOCACION_MAX_LENGTH) {
+    return `Visión o vocación del país: debe tener entre ${VOCACION_MIN_LENGTH} y ${VOCACION_MAX_LENGTH} caracteres.`;
+  }
+
+  return null;
 }
 
 function buildUserFriendlyError(status: number, body: unknown): string {
@@ -135,6 +163,19 @@ export function useGiftIdeaRegistration(): UseGiftIdeaRegistrationReturn {
     setIsSubmitting(true);
     setErrorMessage(null);
 
+    const normalizedPayload: GiftIdeaRegistrationPayload = {
+      ...payload,
+      ideas: payload.ideas.trim(),
+      visionVocacionPais: payload.visionVocacionPais.trim(),
+    };
+
+    const validationError = validatePayload(normalizedPayload);
+    if (validationError) {
+      setErrorMessage(validationError);
+      setIsSubmitting(false);
+      return false;
+    }
+
     try {
       const response = await fetch(REGISTRO_URL, {
         method: "POST",
@@ -142,7 +183,7 @@ export function useGiftIdeaRegistration(): UseGiftIdeaRegistrationReturn {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify(normalizedPayload),
       });
 
       if (!response.ok) {
@@ -153,7 +194,7 @@ export function useGiftIdeaRegistration(): UseGiftIdeaRegistrationReturn {
           status: response.status,
           responseBody: parsedBody,
           responseBodyRaw: rawBody,
-          payload,
+          payload: normalizedPayload,
         });
 
         setErrorMessage(buildUserFriendlyError(response.status, parsedBody));
@@ -164,7 +205,7 @@ export function useGiftIdeaRegistration(): UseGiftIdeaRegistrationReturn {
     } catch (error) {
       console.error("[GiftIdeaVzla] Fallo de red o excepción inesperada", {
         error,
-        payload,
+        payload: normalizedPayload,
       });
 
       setErrorMessage(
