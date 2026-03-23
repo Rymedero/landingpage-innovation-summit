@@ -290,9 +290,10 @@ function GiftIdeaVzla() {
 
 							<label className="block sm:col-span-2">
 								<span className="mb-2 block text-sm font-semibold text-white">
-									Visión o vocación del país <span className="text-slate-400">(opcional)</span>
+									Visión o vocación del país <span className="text-red-400">*</span>
 								</span>
 								<textarea
+									required
 									minLength={VOCACION_MIN_LENGTH}
 									maxLength={VOCACION_MAX_LENGTH}
 									rows={4}
