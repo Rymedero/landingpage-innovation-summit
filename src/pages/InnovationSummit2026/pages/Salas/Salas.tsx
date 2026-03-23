@@ -7,7 +7,7 @@ import { FooterSummit } from "../../components/Footer";
 // const VITE_ID_VIDEO_2 = import.meta.env.VITE_ID_VIDEO_2;
 // const VITE_ID_VIDEO_3 = import.meta.env.VITE_ID_VIDEO_3;
 
-const VITE_ID_VIDEO_1 = "riwNcB8C8nQ";
+const VITE_ID_VIDEO_1 = "0xj5T6ABKL4";
 const VITE_ID_VIDEO_2 = "___7kD-uLkQ";
 const VITE_ID_VIDEO_3 = "EWl12PcdK2w";
 
@@ -39,7 +39,7 @@ function Salas() {
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
                 // src={`https://www.youtube.com/embed/${video.id}?autoplay=1&rel=1&mute=1`}
-                src={`https://www.youtube.com/embed/${video.id}?autoplay=1&rel=1&mute=1&loop=1&playlist=${video.id}`}
+                src={`https://www.youtube.com/embed/${video.id}?autoplay=1&rel=1&mute=1`}
                 title={video.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
