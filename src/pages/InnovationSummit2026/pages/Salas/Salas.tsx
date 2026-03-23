@@ -3,14 +3,18 @@ import { FooterSummit } from "../../components/Footer";
 
 // IDs de los videos de YouTube
 
-const VITE_ID_VIDEO_1 = import.meta.env.VITE_ID_VIDEO_1;
-const VITE_ID_VIDEO_2 = import.meta.env.VITE_ID_VIDEO_2;
-const VITE_ID_VIDEO_3 = import.meta.env.VITE_ID_VIDEO_3;
+// const VITE_ID_VIDEO_1 = import.meta.env.VITE_ID_VIDEO_1;
+// const VITE_ID_VIDEO_2 = import.meta.env.VITE_ID_VIDEO_2;
+// const VITE_ID_VIDEO_3 = import.meta.env.VITE_ID_VIDEO_3;
+
+const VITE_ID_VIDEO_1 = "riwNcB8C8nQ";
+const VITE_ID_VIDEO_2 = "___7kD-uLkQ";
+const VITE_ID_VIDEO_3 = "EWl12PcdK2w";
 
 const YOUTUBE_LIVES = [
   { id: VITE_ID_VIDEO_1, title: "AUDITORIO - MAIN ARENA" },
   { id: VITE_ID_VIDEO_2, title: "SALA FUSION - DEEP TECH RING" },
-  { id: VITE_ID_VIDEO_3, title: "SALA PARADOX - RÉPLICA DEL MAIN ARENA" },
+  { id: VITE_ID_VIDEO_3, title: "SALA PARADOX - INNOVEYTION FAIR (PLAZA CENTRAL)" },
 ];
 function Salas() {
   return (
@@ -34,7 +38,8 @@ function Salas() {
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-zinc-900">
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
-                src={`https://www.youtube.com/embed/${video.id}?autoplay=1&rel=1&mute=1`}
+                // src={`https://www.youtube.com/embed/${video.id}?autoplay=1&rel=1&mute=1`}
+                src={`https://www.youtube.com/embed/${video.id}?autoplay=1&rel=1&mute=1&loop=1&playlist=${video.id}`}
                 title={video.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
