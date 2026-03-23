@@ -36,9 +36,9 @@ const sectorOptions = [
 	"Infraestructura",
 ];
 
-const IDEAS_MIN_LENGTH = 150;
+const IDEAS_MIN_LENGTH = 30;
 const IDEAS_MAX_LENGTH = 800;
-const VOCACION_MIN_LENGTH = 150;
+const VOCACION_MIN_LENGTH = 30;
 const VOCACION_MAX_LENGTH = 400;
 
 function GiftIdeaVzla() {
