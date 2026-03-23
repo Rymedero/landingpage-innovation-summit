@@ -38,7 +38,7 @@ function Salas() {
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-zinc-900">
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
-                src={`https://www.youtube.com/embed/${video.id}?autoplay=1&rel=1&mute=1`}
+                src={`https://www.youtube.com/embed/${video.id}?autoplay=1&rel=1&mute=1&loop=1&playlist=${video.id}`}
                 title={video.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
