@@ -3,14 +3,18 @@ import { FooterSummit } from "../../components/Footer";
 
 // IDs de los videos de YouTube
 
-const VITE_ID_VIDEO_1 = import.meta.env.VITE_ID_VIDEO_1;
-const VITE_ID_VIDEO_2 = import.meta.env.VITE_ID_VIDEO_2;
-const VITE_ID_VIDEO_3 = import.meta.env.VITE_ID_VIDEO_3;
+// const VITE_ID_VIDEO_1 = import.meta.env.VITE_ID_VIDEO_1;
+// const VITE_ID_VIDEO_2 = import.meta.env.VITE_ID_VIDEO_2;
+// const VITE_ID_VIDEO_3 = import.meta.env.VITE_ID_VIDEO_3;
+
+const VITE_ID_VIDEO_1 = "___7kD-uLkQ";
+const VITE_ID_VIDEO_2 = "riwNcB8C8nQ&pp=ygUCZXk%3D";
+const VITE_ID_VIDEO_3 = "EWl12PcdK2w";
 
 const YOUTUBE_LIVES = [
   { id: VITE_ID_VIDEO_1, title: "AUDITORIO - MAIN ARENA" },
   { id: VITE_ID_VIDEO_2, title: "SALA FUSION - DEEP TECH RING" },
-  { id: VITE_ID_VIDEO_3, title: "SALA PARADOX - RÉPLICA DEL MAIN ARENA" },
+  { id: VITE_ID_VIDEO_3, title: "SALA PARADOX - INNOVEYTION FAIR (PLAZA CENTRAL)" },
 ];
 function Salas() {
   return (
