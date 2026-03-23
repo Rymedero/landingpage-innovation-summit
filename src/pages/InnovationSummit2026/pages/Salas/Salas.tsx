@@ -8,7 +8,7 @@ import { FooterSummit } from "../../components/Footer";
 // const VITE_ID_VIDEO_3 = import.meta.env.VITE_ID_VIDEO_3;
 
 const VITE_ID_VIDEO_1 = "___7kD-uLkQ";
-const VITE_ID_VIDEO_2 = "riwNcB8C8nQ&pp=ygUCZXk%3D";
+const VITE_ID_VIDEO_2 = "riwNcB8C8nQ";
 const VITE_ID_VIDEO_3 = "EWl12PcdK2w";
 
 const YOUTUBE_LIVES = [
