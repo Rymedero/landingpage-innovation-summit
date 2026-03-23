@@ -9,7 +9,7 @@ import { FooterSummit } from "../../components/Footer";
 
 const VITE_ID_VIDEO_1 = "0xj5T6ABKL4";
 const VITE_ID_VIDEO_2 = "4sSVBfWvwgM";
-const VITE_ID_VIDEO_3 = "EWl12PcdK2w";
+const VITE_ID_VIDEO_3 = "UlP64jz3nG0";
 
 const YOUTUBE_LIVES = [
   { id: VITE_ID_VIDEO_1, title: "AUDITORIO - MAIN ARENA" },
