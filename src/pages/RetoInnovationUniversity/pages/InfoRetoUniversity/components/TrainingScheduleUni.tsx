@@ -24,7 +24,7 @@ export function TrainingScheduleUni() {
 
               <tr>
                 <th className="text-gray-400">Final</th>
-                <td className="text-gray-400">Viernes 29 de mayo</td>
+                <td className="text-gray-400">Martes 19 de mayo</td>
                 <td className="text-gray-400">8:00 am – 1:00 pm</td>
               </tr>
             </tbody>

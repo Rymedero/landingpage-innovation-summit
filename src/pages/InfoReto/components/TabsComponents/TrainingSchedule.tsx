@@ -102,7 +102,7 @@ export function TrainingSchedule() {
 
                     <tr>
                         <th className="text-white">Final</th>
-                        <td className="text-gray-400">Viernes 29 de mayo</td>
+                        <td className="text-gray-400">Martes 19 de mayo</td>
                         <td className="text-gray-400">8:00 am – 1:00 pm</td>
                         <td className="text-gray-400">Presencial</td>
                     </tr>
